@@ -1,0 +1,31 @@
+int main (){
+  8d:	55                   	push   rbp
+  8e:	48 89 e5             	mov    rbp,rsp
+  91:	48 83 ec 20          	sub    rsp,0x20
+    int uh = 0;
+  95:	c7 45 e8 00 00 00 00 	mov    DWORD PTR [rbp-0x18],0x0
+    int dh = 0;
+  9c:	c7 45 ec 00 00 00 00 	mov    DWORD PTR [rbp-0x14],0x0
+    int um = 0;
+  a3:	c7 45 f0 00 00 00 00 	mov    DWORD PTR [rbp-0x10],0x0
+    int dm = 0;
+  aa:	c7 45 f4 00 00 00 00 	mov    DWORD PTR [rbp-0xc],0x0
+    int us = 0;
+  b1:	c7 45 f8 00 00 00 00 	mov    DWORD PTR [rbp-0x8],0x0
+    int ds = 0;
+  b8:	c7 45 fc 00 00 00 00 	mov    DWORD PTR [rbp-0x4],0x0
+    relogio(dh,uh,dm,um,ds,us);
+  bf:	44 8b 45 f8          	mov    r8d,DWORD PTR [rbp-0x8]
+  c3:	8b 7d fc             	mov    edi,DWORD PTR [rbp-0x4]
+  c6:	8b 4d f0             	mov    ecx,DWORD PTR [rbp-0x10]
+  c9:	8b 55 f4             	mov    edx,DWORD PTR [rbp-0xc]
+  cc:	8b 75 e8             	mov    esi,DWORD PTR [rbp-0x18]
+  cf:	8b 45 ec             	mov    eax,DWORD PTR [rbp-0x14]
+  d2:	45 89 c1             	mov    r9d,r8d
+  d5:	41 89 f8             	mov    r8d,edi
+  d8:	89 c7                	mov    edi,eax
+  da:	e8 00 00 00 00       	call   df <main+0x52>
+  df:	b8 00 00 00 00       	mov    eax,0x0
+}
+  e4:	c9                   	leave  
+  e5:	c3                   	ret 

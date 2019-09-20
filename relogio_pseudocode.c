@@ -30,16 +30,3 @@ void relogio (int dh, int uh, int dm, int um, int ds, int us){
         }
     }
 }
-
-int main (){
-    int uh = 0;
-    int dh = 0;
-    int um = 0;
-    int dm = 0;
-    int us = 0;
-    int ds = 0;
-    relogio(dh,uh,dm,um,ds,us);
-}
-
-
-

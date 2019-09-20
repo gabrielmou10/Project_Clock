@@ -1,0 +1,18 @@
+Instruções
+
+
+RELOGIO:
+- push
+- mov
+- add
+- cmp
+- jne
+- jmp
+
+MAIN:
+- push
+- mov
+- sub
+- call
+- leave
+- ret

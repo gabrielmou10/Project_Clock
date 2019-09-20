@@ -1,0 +1,63 @@
+void relogio (int dh, int uh, int dm, int um, int ds, int us){
+   0:	55                   	push   rbp
+   1:	48 89 e5             	mov    rbp,rsp
+   4:	89 7d fc             	mov    DWORD PTR [rbp-0x4],edi
+   7:	89 75 f8             	mov    DWORD PTR [rbp-0x8],esi
+   a:	89 55 f4             	mov    DWORD PTR [rbp-0xc],edx
+   d:	89 4d f0             	mov    DWORD PTR [rbp-0x10],ecx
+  10:	44 89 45 ec          	mov    DWORD PTR [rbp-0x14],r8d
+  14:	44 89 4d e8          	mov    DWORD PTR [rbp-0x18],r9d
+    while (1) {
+        us = us + 1;
+  18:	83 45 e8 01          	add    DWORD PTR [rbp-0x18],0x1
+        if (us == 10){
+  1c:	83 7d e8 0a          	cmp    DWORD PTR [rbp-0x18],0xa
+  20:	75 0b                	jne    2d <relogio+0x2d>
+            us = 0;
+  22:	c7 45 e8 00 00 00 00 	mov    DWORD PTR [rbp-0x18],0x0
+            ds = ds + 1;
+  29:	83 45 ec 01          	add    DWORD PTR [rbp-0x14],0x1
+        }
+        if (ds == 6){
+  2d:	83 7d ec 06          	cmp    DWORD PTR [rbp-0x14],0x6
+  31:	75 0b                	jne    3e <relogio+0x3e>
+            ds = 0;
+  33:	c7 45 ec 00 00 00 00 	mov    DWORD PTR [rbp-0x14],0x0
+            um = um + 1;
+  3a:	83 45 f0 01          	add    DWORD PTR [rbp-0x10],0x1
+        }
+        if (um == 10){
+  3e:	83 7d f0 0a          	cmp    DWORD PTR [rbp-0x10],0xa
+  42:	75 0b                	jne    4f <relogio+0x4f>
+            um = 0;
+  44:	c7 45 f0 00 00 00 00 	mov    DWORD PTR [rbp-0x10],0x0
+            dm = dm + 1;
+  4b:	83 45 f4 01          	add    DWORD PTR [rbp-0xc],0x1
+        }
+        if (dm == 6){
+  4f:	83 7d f4 06          	cmp    DWORD PTR [rbp-0xc],0x6
+  53:	75 0b                	jne    60 <relogio+0x60>
+            dm = 0;
+  55:	c7 45 f4 00 00 00 00 	mov    DWORD PTR [rbp-0xc],0x0
+            uh = uh + 1;
+  5c:	83 45 f8 01          	add    DWORD PTR [rbp-0x8],0x1
+        }
+        if (uh == 10 ){
+  60:	83 7d f8 0a          	cmp    DWORD PTR [rbp-0x8],0xa
+  64:	75 0b                	jne    71 <relogio+0x71>
+            uh = 0;
+  66:	c7 45 f8 00 00 00 00 	mov    DWORD PTR [rbp-0x8],0x0
+            dh =  dh + 1;
+  6d:	83 45 fc 01          	add    DWORD PTR [rbp-0x4],0x1
+        } 
+        if (dh == 2 && uh == 4){
+  71:	83 7d fc 02          	cmp    DWORD PTR [rbp-0x4],0x2
+  75:	75 a1                	jne    18 <relogio+0x18>
+  77:	83 7d f8 04          	cmp    DWORD PTR [rbp-0x8],0x4
+  7b:	75 9b                	jne    18 <relogio+0x18>
+                uh = 0;
+  7d:	c7 45 f8 00 00 00 00 	mov    DWORD PTR [rbp-0x8],0x0
+                dh = 0;
+  84:	c7 45 fc 00 00 00 00 	mov    DWORD PTR [rbp-0x4],0x0
+        us = us + 1;
+  8b:	eb 8b                	jmp    18 <relogio+0x18>
