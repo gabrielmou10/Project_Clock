@@ -1,0 +1,13 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.STD_LOGIC_UNSIGNED.all;
+
+entity Ula is
+port
+(
+A, B: in STD_LOGIC_VECTOR(3 downto 0);
+oper: in STD_LOGIC_VECTOR(2 downto 0);
+N, Z, C, V: out STD_LOGIC;
+S: out STD_LOGIC_VECTOR(3 downto 0)
+);
+end Ula4bits;
