@@ -1,39 +1,39 @@
+-- A library clause declares a name as a library.  It 
+-- does not create the library; it simply forward declares 
+-- it. 
 library IEEE;
-use IEEE.STD_LOGIC_1164.all;
-use IEEE.STD_LOGIC_UNSIGNED.all;
-
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
 entity ula is
-port
-(
-A, B: in STD_LOGIC_VECTOR(3 downto 0);
-oper: in STD_LOGIC_VECTOR(2 downto 0);
-N, Z, C, V: out STD_LOGIC;
-S: out STD_LOGIC_VECTOR(3 downto 0)
-);
-end ula;
-architecture ula4bits of ula is
-signal iA, iB, i_S: STD_LOGIC_VECTOR(4 downto 0);
-signal SS: STD_LOGIC_VECTOR(3 downto 0);
+
+	generic(
+		larguraBarramentoDados: natural := 8
+	);
+
+	port
+	(
+		-- Input ports
+		A	: in  std_logic_vector(larguraBarramentoDados-1 DOWNTO 0);
+		B	: in   std_logic_vector(larguraBarramentoDados-1 DOWNTO 0);
+		OP	: in std_logic_vector(1 DOWNTO 0);
+
+		-- Output ports
+		S	: out std_logic_vector(larguraBarramentoDados-1 DOWNTO 0);
+		CMP	: out std_logic
+	);
+end entity;
+
+
+architecture functions of ULA is
+
 begin
-iA <= A(3) & A; -- Extensão de sinal
-iB <= B(3) & B;
-SS <= i_S(3 downto 0);
-S <= SS;
-with op select
-i_S <= iA + iB when “000”,
-iA - iB when “001”,
-iA + 1 when “010”,
-iA - 1 when “011”,
-iA and iB when “100”,
-iA or iB when “101”,
-iA xor iB when “110”,
-not iA when others;
-N <= '1' when SS < 0 else '0';
-Z <= '1' when SS = 0 else '0';
-C <= i_S(4);
-V <= '1' when
-((op=“000”) and ((iA>0 and iB>0 and SS<0) or (iA < 0 and iB < 0 and SS > 0))) or
-((op=“010” or op=“011”) and ((iA > 0 and SS < 0) or (iA < 0 and SS > 0))) or
-((op=“001”) and ((iA>0 and iB<0 and SS<0) or (iA < 0 and iB > 0 and SS > 0)))
-else '0';
-end ula4bits; 
+
+	S <=  std_logic_vector (A) when (OP = "00") else std_logic_vector(unsigned(A) + unsigned(B)) when (OP = "01") else 
+			"00000011" when (OP = "10") else
+			"00000011" when (OP = "11");
+			
+	CMP <= '1' when ((A /= B) and (OP = "10")) else '1' when ((A = B) and (OP = "11")) else '0';
+	
+end architecture;
+
+

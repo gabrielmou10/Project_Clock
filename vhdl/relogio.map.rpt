@@ -1,23 +1,24 @@
-Analysis & Synthesis report for relogio
-Sun Oct 06 21:49:35 2019
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Analysis & Elaboration report for relogio
+Mon Oct 07 00:44:41 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |ula
+  5. Analysis & Elaboration Settings
+  6. Analysis & Elaboration Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2017  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -33,34 +34,60 @@ refer to the applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sun Oct 06 21:49:35 2019           ;
-; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
-; Revision Name               ; relogio                                     ;
-; Top-level Entity Name       ; ram                                         ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Mon Oct 07 00:44:41 2019       ;
+; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                 ; relogio                                     ;
+; Top-level Entity Name         ; ula                                         ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |ula ;
++------------------------+-------+------------------------------------+
+; Parameter Name         ; Value ; Type                               ;
++------------------------+-------+------------------------------------+
+; larguraBarramentoDados ; 8     ; Signed Integer                     ;
++------------------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; ram                ; relogio            ;
+; Top-level entity name                                                           ; ula                ; relogio            ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
 ; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
 ; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
@@ -138,84 +165,32 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Oct 06 21:49:17 2019
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off relogio -c relogio
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Mon Oct 07 00:44:21 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off relogio -c relogio --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Error (10500): VHDL syntax error at relogio.vhd(44) near text "signal";  expecting "(", or an identifier ("signal" is a reserved keyword), or  unary operator File: D:/intelFPGA_lite/17.1/Relogio/relogio.vhd Line: 44
-Error (10500): VHDL syntax error at relogio.vhd(110) near text "port";  expecting "end", or "(", or an identifier ("port" is a reserved keyword), or a concurrent statement File: D:/intelFPGA_lite/17.1/Relogio/relogio.vhd Line: 110
-Error (10500): VHDL syntax error at relogio.vhd(115) near text ")";  expecting "(", or an identifier, or  unary operator File: D:/intelFPGA_lite/17.1/Relogio/relogio.vhd Line: 115
-Error (10437): VHDL Association List error at relogio.vhd(120): positional associations must be listed before named associations File: D:/intelFPGA_lite/17.1/Relogio/relogio.vhd Line: 120
-Error (10500): VHDL syntax error at relogio.vhd(121) near text ";";  expecting "<=" File: D:/intelFPGA_lite/17.1/Relogio/relogio.vhd Line: 121
-Error (10500): VHDL syntax error at relogio.vhd(127) near text ";";  expecting "<=" File: D:/intelFPGA_lite/17.1/Relogio/relogio.vhd Line: 127
-Info (12021): Found 0 design units, including 0 entities, in source file relogio.vhd
-Info (12021): Found 1 design units, including 1 entities, in source file display.vhd
-    Info (12023): Found entity 1: display7Seg File: D:/intelFPGA_lite/17.1/Relogio/display.vhd Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file leds.vhd
-    Info (12023): Found entity 1: leds File: D:/intelFPGA_lite/17.1/Relogio/leds.vhd Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file chaves.vhd
-    Info (12023): Found entity 1: chaves File: D:/intelFPGA_lite/17.1/Relogio/chaves.vhd Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file botoes.vhd
-    Info (12023): Found entity 1: botoes File: D:/intelFPGA_lite/17.1/Relogio/botoes.vhd Line: 4
-Warning (12090): Entity "mux" obtained from "mux.vhd" instead of from Quartus Prime megafunction library File: D:/intelFPGA_lite/17.1/Relogio/mux.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file mux.vhd
-    Info (12022): Found design unit 1: mux-comportamento File: D:/intelFPGA_lite/17.1/Relogio/mux.vhd Line: 18
-    Info (12023): Found entity 1: mux File: D:/intelFPGA_lite/17.1/Relogio/mux.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
-    Info (12022): Found design unit 1: ram-comportamento File: D:/intelFPGA_lite/17.1/Relogio/ram.vhd Line: 30
-    Info (12023): Found entity 1: ram File: D:/intelFPGA_lite/17.1/Relogio/ram.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
-    Info (12022): Found design unit 1: rom-assincrona File: D:/intelFPGA_lite/17.1/Relogio/rom.vhd Line: 16
-    Info (12023): Found entity 1: rom File: D:/intelFPGA_lite/17.1/Relogio/rom.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file registrador.vhd
-    Info (12022): Found design unit 1: registrador-comportamento File: D:/intelFPGA_lite/17.1/Relogio/registrador.vhd Line: 15
-    Info (12023): Found entity 1: registrador File: D:/intelFPGA_lite/17.1/Relogio/registrador.vhd Line: 4
-Error (10500): VHDL syntax error at ula.vhd(23) near text € File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 23
-Error (10500): VHDL syntax error at ula.vhd(23) near text "€";  expecting ";", or "," File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 23
-Error (10500): VHDL syntax error at ula.vhd(23) near text œ File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 23
-Error (10500): VHDL syntax error at ula.vhd(23) near text  File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 23
-Error (10500): VHDL syntax error at ula.vhd(24) near text € File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 24
-Error (10500): VHDL syntax error at ula.vhd(24) near text "€";  expecting ";", or "," File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 24
-Error (10500): VHDL syntax error at ula.vhd(24) near text œ File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 24
-Error (10500): VHDL syntax error at ula.vhd(24) near text  File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 24
-Error (10500): VHDL syntax error at ula.vhd(25) near text € File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 25
-Error (10500): VHDL syntax error at ula.vhd(25) near text "€";  expecting ";", or "," File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 25
-Error (10500): VHDL syntax error at ula.vhd(25) near text œ File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 25
-Error (10500): VHDL syntax error at ula.vhd(25) near text  File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 25
-Error (10500): VHDL syntax error at ula.vhd(26) near text € File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 26
-Error (10500): VHDL syntax error at ula.vhd(26) near text "€";  expecting ";", or "," File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 26
-Error (10500): VHDL syntax error at ula.vhd(26) near text œ File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 26
-Error (10500): VHDL syntax error at ula.vhd(26) near text  File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 26
-Error (10500): VHDL syntax error at ula.vhd(27) near text € File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 27
-Error (10500): VHDL syntax error at ula.vhd(27) near text "€";  expecting ";", or "," File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 27
-Error (10500): VHDL syntax error at ula.vhd(27) near text œ File: D:/intelFPGA_lite/17.1/Relogio/ula.vhd Line: 27
-Info (12021): Found 0 design units, including 0 entities, in source file ula.vhd
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 25 errors, 2 warnings
-    Error: Peak virtual memory: 4843 megabytes
-    Error: Processing ended: Sun Oct 06 21:49:35 2019
-    Error: Elapsed time: 00:00:18
-    Error: Total CPU time (on all processors): 00:00:39
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
+    Info (12022): Found design unit 1: ULA-functions File: C:/Users/Gabri/OneDrive/Documentos/Insper/6Semestre/DesigndeComputadores/Project_Clock/vhdl/ula.vhd Line: 27
+    Info (12023): Found entity 1: ula File: C:/Users/Gabri/OneDrive/Documentos/Insper/6Semestre/DesigndeComputadores/Project_Clock/vhdl/ula.vhd Line: 7
+Info (12127): Elaborating entity "ula" for the top level hierarchy
+Info (10041): Inferred latch for "S[0]" at ula.vhd(31) File: C:/Users/Gabri/OneDrive/Documentos/Insper/6Semestre/DesigndeComputadores/Project_Clock/vhdl/ula.vhd Line: 31
+Info (10041): Inferred latch for "S[1]" at ula.vhd(31) File: C:/Users/Gabri/OneDrive/Documentos/Insper/6Semestre/DesigndeComputadores/Project_Clock/vhdl/ula.vhd Line: 31
+Info (10041): Inferred latch for "S[2]" at ula.vhd(31) File: C:/Users/Gabri/OneDrive/Documentos/Insper/6Semestre/DesigndeComputadores/Project_Clock/vhdl/ula.vhd Line: 31
+Info (10041): Inferred latch for "S[3]" at ula.vhd(31) File: C:/Users/Gabri/OneDrive/Documentos/Insper/6Semestre/DesigndeComputadores/Project_Clock/vhdl/ula.vhd Line: 31
+Info (10041): Inferred latch for "S[4]" at ula.vhd(31) File: C:/Users/Gabri/OneDrive/Documentos/Insper/6Semestre/DesigndeComputadores/Project_Clock/vhdl/ula.vhd Line: 31
+Info (10041): Inferred latch for "S[5]" at ula.vhd(31) File: C:/Users/Gabri/OneDrive/Documentos/Insper/6Semestre/DesigndeComputadores/Project_Clock/vhdl/ula.vhd Line: 31
+Info (10041): Inferred latch for "S[6]" at ula.vhd(31) File: C:/Users/Gabri/OneDrive/Documentos/Insper/6Semestre/DesigndeComputadores/Project_Clock/vhdl/ula.vhd Line: 31
+Info (10041): Inferred latch for "S[7]" at ula.vhd(31) File: C:/Users/Gabri/OneDrive/Documentos/Insper/6Semestre/DesigndeComputadores/Project_Clock/vhdl/ula.vhd Line: 31
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4856 megabytes
+    Info: Processing ended: Mon Oct 07 00:44:41 2019
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:40
 
 
