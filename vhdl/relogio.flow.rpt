@@ -1,5 +1,5 @@
 Flow report for relogio
-Mon Oct 07 00:44:41 2019
+Mon Oct 07 01:04:54 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,10 +40,10 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Mon Oct 07 00:44:41 2019       ;
+; Flow Status                 ; Successful - Mon Oct 07 01:04:54 2019       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; relogio                                     ;
-; Top-level Entity Name       ; ula                                         ;
+; Top-level Entity Name       ; flipflop                                    ;
 ; Family                      ; Cyclone V                                   ;
 ; Device                      ; 5CGXFC7C7F23C8                              ;
 ; Timing Models               ; Final                                       ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/07/2019 00:44:23 ;
+; Start date & time ; 10/07/2019 01:04:35 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; relogio             ;
 +-------------------+---------------------+
@@ -73,15 +73,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 145667773412707.157041986217012        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 145667773412707.157042107523060        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; ula         ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; ula         ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; ula         ; Top        ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; flipflop    ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; flipflop    ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; flipflop    ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
-; TOP_LEVEL_ENTITY                    ; ula                                    ; relogio       ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; flipflop                               ; relogio       ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
