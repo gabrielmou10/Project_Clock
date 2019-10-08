@@ -18,6 +18,8 @@ entity ram is
         endereco       : in std_logic_vector((larguraEndBancoRegs-1) downto 0);
 		  
         dadoEscrita    : in std_logic_vector((larguraDados-1) downto 0);
+		  
+		  leitura        : in std_logic;
 --
         escreve        : in std_logic;
 		  
@@ -43,6 +45,7 @@ begin
 						registrador(to_integer(unsigned(endereco))) := dadoEscrita;
 				
 					end if;
+					 
 		 
         end if;
     end process;
@@ -50,10 +53,21 @@ begin
     -- IF endereco = 0 : retorna ZERO
      process(all) is
      begin
-         if (unsigned(endereco) = 0) then
-            saida <= (others => '0');
-         else
-            saida <= registrador(to_integer(unsigned(endereco)));
-         end if;
+			if (leitura = '1') then
+			
+				if (unsigned(endereco) = 0) then
+					saida <= (others => '0');
+					
+				else
+					saida <= registrador(to_integer(unsigned(endereco)));
+				
+				end if;
+				
+			
+			else (leitura = '0') then
+				saida <= (others => '0');
+			
+			end if;
+			
      end process;
 end architecture;
