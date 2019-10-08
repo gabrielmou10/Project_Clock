@@ -5,23 +5,18 @@ entity relogio is
     generic (
         larguraBarramentoEnderecos  : natural := 8;
         larguraBarramentoDados      : natural := 8;
-        quantidadeChaves            : natural := 18;
-        quantidadeBotoes            : natural := 4;
-        quantidadeDisplays          : natural := 8
+        quantidadeDisplays          : natural := 4
     );
     port
     (
         CLK : IN STD_LOGIC;
-        -- BOTOES
-        KEY: IN STD_LOGIC_VECTOR(quantidadeBotoes-1 DOWNTO 0);
-        -- CHAVES
-        SW : IN STD_LOGIC_VECTOR(quantidadeChaves-1 downto 0);
+        -- BOTOEs
         
         -- DISPLAYS 7 SEG
-        HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0)
+        HEX0, HEX1, HEX2, HEX3 : OUT STD_LOGIC_VECTOR(3 downto 0)
     );
 end entity;
-
+	
 architecture estrutural of relogio is
 
     -- Sinais de barramentos
@@ -35,24 +30,26 @@ architecture estrutural of relogio is
 
     -- Sinais de habilitacao dos componentes
     signal habilitaDisplay          : STD_LOGIC_VECTOR(quantidadeDisplays-1 DOWNTO 0);
-    signal habilitaChaves           : STD_LOGIC_VECTOR(quantidadeChaves-1 DOWNTO 0);
-    signal habilitaBotoes           : STD_LOGIC_VECTOR(quantidadeBotoes-1 DOWNTO 0);
     signal habilitaBaseTempo        : STD_LOGIC;
 
     -- Sinais auxiliares
-    signal entradaDisplays          : STD_LOGIC_VECTOR(quantidadeDisplays-1 DOWNTO);
-    signal saidaChaves              : STD_LOGIC_VECTOR(quantidadeChaves-1 DOWNTO 0);
-    signal saidaBotoes              : STD_LOGIC_VECTOR(quantidadeBotoes-1 DOWNTO 0);
+    signal entradaDisplays          : STD_LOGIC_VECTOR(quantidadeDisplays-1 DOWNTO 0);
     signal saidaDivisorGenerico     : STD_LOGIC;
+	 
+	 signal dadosEntrada					: STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
+	 signal entradaCPU					: STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
 
 begin
+	
+	entradaCPU <= "00000000";
 
     -- Instanciação da CPU
-    CPU : entity work.cpu 
+    CPU : entity work.cpu
     port map
+	 
     (
         clk                     => clk,
-        barramentoDadosEntrada  => barramentoDadosEntrada,
+        barramentoDadosEntrada  => entradaCPU or barramentoDadosSaida,
         barramentoEnderecos     => barramentoEnderecos,
         barramentoDadosSaida    => barramentoDadosSaida,
         readEnable              => readEnable,
@@ -62,16 +59,25 @@ begin
     -- Instanciação do Decodificador de Endereços
         -- A entidade do decodificador fica a criterio do grupo
         -- o portmap a seguir serve como exemplo
-    DE : entity work.decodificador_enderecos 
+    DE : entity work.decoder 
     port map
     (
-        endereco        => endereco,
-        readEnable      => readEnable,
-        writeEnable     => writeEnable,
-        habilitaDisplay => habilitaDisplay,
-        habilitaLedsRed => habilitaLedsRed
-        -- ...
+        enable_decoder  => barramentoEnderecos(7 DOWNTO 5),
+		  enable_dez_hora => habilitaDisplay(0),
+        enable_unit_hora => habilitaDisplay(1),
+        enable_dez_min => habilitaDisplay(2),
+		  enable_unit_min => habilitaDisplay(3)       -- ...
     );
+	 
+	 RAM: entity work.ram
+	 port map
+	 (
+			clk => clk,
+			endereco => barramentoEnderecos,
+			dadoEscrita => barramentoDadosSaida,
+			escreve => writeEnable,
+			saida => barramentoDadosEntrada
+	 );
 
     -- Instanciação do componente Divisor Genérico
         -- Componente da composição da Base de Tempo
@@ -79,52 +85,11 @@ begin
     port map
     (
         clk             => clk,
-        saida_clk       => saidaDivisorGenerico
+		  divisorin			=> barramentoDadosSaida(7),
+        divisorout      => entradaCPU(7)
     );
-
-    -- Instanciação de cada Display
-    DISPLAY0 : entity work.display7Seg 
-    port map
-    (
-        clk         => clk,
-        dadoHex     => entradaDisplays,
-        habilita    => habilitaDisplay(0),
-        saida7seg   => HEX0
-    );
-
-    DISPLAY1 : entity work.display7Seg 
-    port map
-    (
-        clk         => clk,
-        dadoHex     => entradaDisplays,
-        habilita    => habilitaDisplay(1),
-        saida7seg   => HEX1
-    );
-
-
-    -- Instanciação das Chaves
-    CHAVES : entity work.chaves 
-    generic map (
-        quantidadeChaves    => quantidadeChaves
-    );
-    port map (
-        entradaChaves   => SW(quantidadeChaves-1 DOWNTO 0),
-        habilita        => habilitaChaves,
-        saida           => saidaChaves,
-    );
-
-    -- Instanciação dos Botões
-    BOTOES : entity work.botoes 
-    generic map (
-        quantidadeBotoes    => quantidadeBotoes
-    );
-    port map
-    (
-        entradaBotoes   => KEY(quantidadeBotoes-1 DOWNTO 0),
-        habilita        => habilitaBotoes,
-        saidaBotoes     => saidaBotoes
-    );
-
+	 
+	 
     -- Completar com a instanciação de demais componentes necessários 
     -- e ligações entre os sinais auxiliares de saida/entrada e os barramentos da CPU
 

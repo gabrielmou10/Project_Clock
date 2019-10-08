@@ -10,8 +10,8 @@ entity divisorGenerico is
   
   port(
     clk      :   in std_logic;
-	 divisorin :   in std_logic_vector(7 downto 0);
-    divisorout :   out std_logic_vector(7 downto 0)
+	 divisorin :   in std_logic;
+    divisorout :   out std_logic
   );
   
 end entity;
@@ -32,24 +32,24 @@ begin
   
     if rising_edge(clk) then
 	 
-		if (divisorin = "00000001") then
-			divisorout <= "00000000";
+		if (divisorin = '1') then
+			divisorout <= '0';
+			contador <= 0;
 			
 		end if;
 		
-      if contador = divisor then
+      if (contador >= divisor) then
         contador <= 0;
-        tick <= not tick;
-		  divisorout <= "00000001";
+        --tick <= not tick;
+		  divisorout <= '1';
 		  
       else
         contador <= contador + 1;
+		  divisorout <= '0';
       end if;
 		
     end if;
 	 
   end process;
-  
-  divisorout <= tick;
   
 end architecture divInteiro;
