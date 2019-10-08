@@ -1,5 +1,5 @@
 Analysis & Elaboration report for relogio
-Mon Oct 07 01:04:54 2019
+Tue Oct 08 11:23:12 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -9,8 +9,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |divisorGenerico
+  5. Analysis & Elaboration Settings
+  6. Analysis & Elaboration Messages
 
 
 
@@ -36,10 +37,10 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Mon Oct 07 01:04:54 2019       ;
+; Analysis & Elaboration Status ; Successful - Tue Oct 08 11:23:12 2019       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; relogio                                     ;
-; Top-level Entity Name         ; flipflop                                    ;
+; Top-level Entity Name         ; divisorGenerico                             ;
 ; Family                        ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
 ; Total registers               ; N/A until Partition Merge                   ;
@@ -67,13 +68,24 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |divisorGenerico ;
++----------------+----------+-----------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                ;
++----------------+----------+-----------------------------------------------------+
+; divisor1       ; 50000000 ; Signed Integer                                      ;
+; divisor2       ; 20000000 ; Signed Integer                                      ;
++----------------+----------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; flipflop           ; relogio            ;
+; Top-level entity name                                                           ; divisorGenerico    ; relogio            ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -160,18 +172,18 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Oct 07 01:04:34 2019
+    Info: Processing started: Tue Oct 08 11:22:54 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off relogio -c relogio --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file flipflop.vhd
-    Info (12022): Found design unit 1: flipflop-comportamento File: C:/Users/Gabri/OneDrive/Documentos/Insper/6Semestre/DesigndeComputadores/Project_Clock/vhdl/flipflop.vhd Line: 13
-    Info (12023): Found entity 1: flipflop File: C:/Users/Gabri/OneDrive/Documentos/Insper/6Semestre/DesigndeComputadores/Project_Clock/vhdl/flipflop.vhd Line: 4
-Info (12127): Elaborating entity "flipflop" for the top level hierarchy
+Info (12021): Found 2 design units, including 1 entities, in source file divisorgenerico.vhd
+    Info (12022): Found design unit 1: divisorGenerico-divInteiro File: C:/Users/Gabri/OneDrive/Documentos/Insper/6Semestre/DesigndeComputadores/Project_Clock/vhdl/divisorGenerico.vhd Line: 24
+    Info (12023): Found entity 1: divisorGenerico File: C:/Users/Gabri/OneDrive/Documentos/Insper/6Semestre/DesigndeComputadores/Project_Clock/vhdl/divisorGenerico.vhd Line: 5
+Info (12127): Elaborating entity "divisorGenerico" for the top level hierarchy
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4856 megabytes
-    Info: Processing ended: Mon Oct 07 01:04:54 2019
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:40
+    Info: Processing ended: Tue Oct 08 11:23:12 2019
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:33
 
 
