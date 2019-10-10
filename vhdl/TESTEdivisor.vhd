@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 use ieee.numeric_std.all;
 
-entity divisorGenerico is
+entity TESTEdivisor is
 
   generic (
     divisor1 : natural := 50000000;
@@ -21,7 +21,7 @@ end entity;
 -- O valor "n" do divisor, define a divisao por "2n".
 -- Ou seja, n é metade do período da frequência de saída.
 
-architecture divInteiro of divisorGenerico is
+architecture arc_TESTEdivisor of TESTEdivisor is
 
   signal tick : std_logic := '0';
   signal contador : integer range 0 to divisor1+1 := 0;
@@ -33,40 +33,19 @@ begin
   begin
   
     if rising_edge(clk) then
-				
-		if (divisorin = '1') then
-			divisorout <= '0';
-			contador <= 0;
-			
-		end if;
-		
-		if (switch = '0') then
-		
+	 
 			if (contador >= divisor1) then
-			  
-			  divisorout <= '1';
+			contador <= 0;
+			  tick <= not tick;
 			  
 			else
 			  contador <= contador + 1;
 			  
 			  
 			end if;
-			
-		end if;
 		
-		if (switch = '1') then
-		
-			if (contador >= divisor2) then
-			  
-			  divisorout <= '1';
-			  
-			else
-			  contador <= contador + 1;
-			  
-			end if;
-		end if;
     end if;
 	 
   end process;
-  
-end architecture divInteiro;
+  divisorout <= tick;
+end architecture arc_TESTEdivisor;

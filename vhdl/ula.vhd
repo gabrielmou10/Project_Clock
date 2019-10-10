@@ -30,7 +30,7 @@ begin
 
 	S <=  std_logic_vector (A) when (OP = "00") else std_logic_vector(unsigned(A) + unsigned(B)) when (OP = "01") else 
 			"00000011" when (OP = "10") else
-			"00000011" when (OP = "11");
+			"00000011" when (OP = "11") else "00000011";
 			
 	CMP <= '1' when ((A /= B) and (OP = "10")) else '1' when ((A = B) and (OP = "11")) else '0';
 	

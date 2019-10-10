@@ -12,11 +12,11 @@ entity cpu is
         larguraBarramentoDados      : natural := 8
     );
     port
-    (
-        clk                     : IN  STD_LOGIC;
+    (	  
+		  LEDG						  : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+        CLOCK_50                : IN  STD_LOGIC;
         barramentoDadosEntrada  : IN STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
         barramentoEnderecos     : OUT STD_LOGIC_VECTOR(larguraBarramentoEnderecos-1 DOWNTO 0);
-		  reset						  : OUT STD_LOGIC;
         barramentoDadosSaida    : OUT STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
 		  resetBarramento			  : OUT STD_LOGIC;
         readEnable              : OUT STD_LOGIC;
@@ -40,7 +40,7 @@ begin
     -- );
     port map
     (
-        CLK         => clk,
+        clk         => CLOCK_50,
         HABACUM     => saidaROM(15),
         DADOSIN     => saidaULA1,
         DADOSOUT    => saidaAcumulador
@@ -52,9 +52,11 @@ begin
 		Endereco		  => saidaPC,
 		Instrucao	  => saidaROM
 	);
+	
+	LEDG <= saidaINC;
 
     -- Instanciação de MUX
-    MUXIMEDIATO : entity work.mux
+    MUXIMEDIATO : entity work.mux2x1
    -- generic map (
 	--      larguraDados    => larguraBarramentoDados
    --);
@@ -70,7 +72,7 @@ begin
 	 
 	 port map
 	 (
-		clk			=> clk,
+		clk			=> CLOCK_50,
 		D				=> saidaULA2,
 		Q				=> saidaFLIPFLOP
 	 );
@@ -83,12 +85,12 @@ begin
 		saida 	  => saidaINC
 	 );
 	 
-	 MUXJUMP : entity work.mux
+	 MUXJUMP : entity work.mux2x1
 	 
 	 port map
 	 (
-			entradaA_MUX			  => saidaROM(7 DOWNTO 0),
-			entradaB_MUX			  => saidaINC,
+			entradaA_MUX			  => saidaINC,
+			entradaB_MUX			  => saidaROM(7 DOWNTO 0),
 			seletor_MUX				  => saidaROM(11) or (saidaROM(10) and saidaFLIPFLOP),
 			saida_MUX				  => saidaMuxJump
 	 );
@@ -99,7 +101,7 @@ begin
 	 
 	 port map
 	 (
-			clk 		=> clk,
+			clk 		=> CLOCK_50,
 			input 	=> saidaMuxJump,
 			output	=> saidaPC
 	 );
@@ -109,7 +111,7 @@ begin
     port map
     (
         A        => saidaMUXI,
-		  B		  => barramentoDadosEntrada,
+		  B		  => saidaAcumulador,
 		  OP       => saidaROM(14 DOWNTO 13),
 		  S        => saidaULA1,
 		  CMP 	  => saidaULA2
@@ -117,7 +119,11 @@ begin
     );
 	 
 	 barramentoEnderecos <= saidaROM(7 DOWNTO 0);
-	 reset <= saidaROM(17);
+	 barramentoDadosSaida <= saidaAcumulador;
+	 resetBarramento <= saidaROM(17);
+	 readEnable <= saidaROM(8);
+	 writeEnable <= saidaROM(9);
+
     
     -- Completar com a instanciação de demais 
     -- componentes necessários

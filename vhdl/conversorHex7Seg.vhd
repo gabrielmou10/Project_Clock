@@ -5,8 +5,9 @@ entity conversorHex7Seg is
     port
     (
         -- Input ports
+		  clk		: in std_logic;
         dadoHex : in  std_logic_vector(3 downto 0);
-	enable: in std_logic;
+		 enable: in std_logic;
         -- Output ports
         saida7seg : out std_logic_vector(6 downto 0)  -- := (others => '1')
     );
@@ -30,7 +31,7 @@ architecture comportamento of conversorHex7Seg is
   signal rascSaida7seg: std_logic_vector(6 downto 0);
 
 begin
-    rascSaida7seg <=    "1000000" when dadoHex="0000" else ---0
+    rascSaida7seg <=    	"1000000" when dadoHex="0000" else ---0
                             "1111001" when dadoHex="0001" else ---1
                             "0100100" when dadoHex="0010" else ---2
                             "0110000" when dadoHex="0011" else ---3
@@ -44,9 +45,18 @@ begin
                             "0000011" when dadoHex="1011" else ---B
                             "1000110" when dadoHex="1100" else ---C
                             "0100001" when dadoHex="1101" else ---D
-                            "0000110" when dadoHex="1110" else ---E
+										"0000110" when dadoHex="1110" else ---E
                             "0001110" when dadoHex="1111" else ---F
-                            "1111111"; -- Apaga todos segmentos.
-If( enable = ‘1’) then    saida7seg <=  rascSaida7seg;
-
+                            "1111111";-- Apaga todos segmentos.
+									 
+	process (clk)
+		begin
+			if(rising_edge(clk)) then
+				if(enable = '1') then
+				saida7seg <=  rascSaida7seg;
+				end if;
+	
+			end if;
+		end process;
+	
 end architecture;

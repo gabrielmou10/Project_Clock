@@ -1,0 +1,97 @@
+-- Copyright (C) 2017  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions
+-- and other software and tools, and its AMPP partner logic
+-- functions, and any output files from any of the foregoing
+-- (including device programming or simulation files), and any
+-- associated documentation or information are expressly subject
+-- to the terms and conditions of the Intel Program License
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+
+WIDTH=18;
+DEPTH=256;
+ADDRESS_RADIX=DEC;
+DATA_RADIX=bin;
+
+CONTENT BEGIN
+--endereco : dado;
+    0    :   001000000000000000; -- Label Inicio
+    1    :   000000001000000001;
+    2    :   001000000000000000;
+    3    :   000000001000000010;
+    4    :   001000000000000000;
+    5    :   000000001000000011;
+    6    :   000000000000000000;
+    7    :   001000000000000000;
+    8    :   000000001000000100;
+    9    :   000000000001000000;
+    10   :   001000000000000000;
+    11   :   000000001000000101;
+    12   :   000000000010000000;
+    13   :   001000000000000000;
+    14   :   000000001000000111;
+    15   :   000000000011000000;
+    16   :   001001000000000000;          -- Label .MEIO
+    17   :   010100000010000000;
+    18   :   000000010000010000;
+    19   :   100000000000000000;          
+    20   :   001001000100000001;  --Label Inc Un. Seg
+    21   :   001010000000000001;
+    22   :   000000001000000001;
+    23   :   010100000000001010;
+    24   :   000000010000010000;
+    25   :   001000000000000000; -- Label Inc Dez Seg
+    26   :   000000001000000001;
+    27   :   001001000100000010;
+    28   :   001010000000000001;
+    29   :   000000001000000010;
+    30   :   010100000000000110;
+    31   :   000000010000010000;
+    32   :   001000000000000000; -- Label Inc Un min
+    33   :   000000001000000010;
+    34   :   001001000100000011;
+    35   :   001010000000000001;
+    36   :   000000001000000011;
+    37   :   000000000000000000;
+    38   :   010100000000001010;
+    39   :   000000010000010000;
+    40   :   001000000000000000; --Label Inc Dez Min
+    41   :   000000001000000011;
+    42   :   001001000100000100;
+    44   :   001010000000000001;
+    44   :   000000001000000100;
+    45   :   000000000001000000;
+    46   :   010100000000000110;
+    47   :   000000010000010000;
+    48   :   001000000000000000; -- Label Inc un Hora
+    49   :   000000001000000100;
+    50   :   001001000100000101;
+    51   :   001010000000000001;
+    52   :   000000001000000101;
+    53   :   000000000010000000;
+    54   :   010110000000000100;
+    55   :   000000010001000010;
+    56   :   010100000000001010;  -- Label Cont un Hora
+    57   :   000000010000010000;
+    58   :   001000000000000000;  --Label Inc dez hora
+    59   :   000000001000000101;
+    60   :   001001000100000111;
+    61   :   001010000000000001;
+    62   :   000000001000000111;
+    63   :   000000000011000000;
+    64   :   010100000000000010; 
+    65   :   000000010000010000; 
+    66   :   001001000100000111; -- Label .Checa Valor .Max.
+    67   :   010100000000000010;
+    68   :   000000010000111000; 
+    69   :   001000000000000000;
+    70   :   000000001000000111;
+    71   :   000000001000000101;
+    72   :   000000000010000000;
+    73   :   000000000011000000;
+    74   :   000000100000010000;
+END;

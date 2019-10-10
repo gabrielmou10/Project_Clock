@@ -34,6 +34,9 @@ architecture comportamento of ram is
 
     -- Declaracao dos registradores:
     shared variable registrador : memoria_t;
+	 
+	 signal endzero : std_logic;
+	 signal estado : std_logic_vector(1 downto 0);
 
 begin
     process(clk) is
@@ -45,29 +48,35 @@ begin
 						registrador(to_integer(unsigned(endereco))) := dadoEscrita;
 				
 					end if;
-					 
-		 
         end if;
     end process;
 
+	 endzero <= '1' when (unsigned(endereco) = 0) else '0';
+	 estado <= endzero & leitura;
+	 
     -- IF endereco = 0 : retorna ZERO
-     process(all) is
-     begin
-			if (leitura = '1') then
-			
-				if (unsigned(endereco) = 0) then
-					saida <= (others => '0');
-					
-				else
-					saida <= registrador(to_integer(unsigned(endereco)));
-				
-				end if;
-				
-			
-			else (leitura = '0') then
-				saida <= (others => '0');
-			
-			end if;
-			
-     end process;
+	 
+	with estado select
+	saida <= (others => '0') when "11",
+				registrador(to_integer(unsigned(endereco))) when "01",
+				(others => '0') when others;
+	 
+--	 enable_dez_hora <= '1' when enable_decoder = "11" else '0';
+--     process(all) is
+--     begin
+--			if (leitura = '1') then
+--			
+--				if (unsigned(endereco) = 0) then
+--					saida <= (others => '0');
+--					
+--				else
+--					saida <= registrador(to_integer(unsigned(endereco)));
+--				
+--				end if;
+--			else
+--				saida <= (others => '0');
+--			
+--			end if;
+--			
+--     end process;
 end architecture;

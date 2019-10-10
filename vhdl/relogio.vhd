@@ -5,15 +5,21 @@ entity relogio is
     generic (
         larguraBarramentoEnderecos  : natural := 8;
         larguraBarramentoDados      : natural := 8;
-        quantidadeDisplays          : natural := 4
+        quantidadeDisplays          : natural := 6;
+		  quantidadeChaves				: natural := 1
     );
     port
     (
-        CLK : IN STD_LOGIC;
+        CLOCK_50 : IN STD_LOGIC;
+		  
+		  
+		  LEDG : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
         -- BOTOEs
         
+		  SW : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
+		  
         -- DISPLAYS 7 SEG
-        HEX0, HEX1, HEX2, HEX3 : OUT STD_LOGIC_VECTOR(3 downto 0)
+        HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : OUT STD_LOGIC_VECTOR(6 downto 0)
     );
 end entity;
 	
@@ -36,25 +42,31 @@ architecture estrutural of relogio is
     signal entradaDisplays          : STD_LOGIC_VECTOR(quantidadeDisplays-1 DOWNTO 0);
     signal saidaDivisorGenerico     : STD_LOGIC;
 	 
+	 signal resetBarramento				: STD_LOGIC;
+	 
 	 signal dadosEntrada					: STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
-	 signal entradaCPU					: STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
+	 signal entradaCPU					: STD_LOGIC;
+	 
+	 SIGNAL aux		: STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
+	 signal testeclock50 : STD_LOGIC;
 
 begin
-	
-	entradaCPU <= "00000000";
+
+	aux <= entradaCPU & barramentoDadosEntrada(6 downto 0);
 
     -- Instanciação da CPU
-    CPU : entity work.cpu
-    port map
-	 
-    (
-        clk                     => clk,
-        barramentoDadosEntrada  => entradaCPU or barramentoDadosSaida,
-        barramentoEnderecos     => barramentoEnderecos,
-        barramentoDadosSaida    => barramentoDadosSaida,
-        readEnable              => readEnable,
-        writeEnable             => writeEnable
-    );
+	CPU : entity work.cpu
+	port map
+	(	
+		LEDG => LEDG,
+		CLOCK_50 => testeclock50,
+		barramentoDadosEntrada => aux,
+		barramentoEnderecos => barramentoEnderecos,
+		barramentoDadosSaida => barramentoDadosSaida,
+		resetBarramento => resetBarramento,
+		readEnable => readEnable,
+		writeEnable => writeEnable
+	);
     
     -- Instanciação do Decodificador de Endereços
         -- A entidade do decodificador fica a criterio do grupo
@@ -66,16 +78,73 @@ begin
 		  enable_dez_hora => habilitaDisplay(0),
         enable_unit_hora => habilitaDisplay(1),
         enable_dez_min => habilitaDisplay(2),
-		  enable_unit_min => habilitaDisplay(3)       -- ...
+		  enable_unit_min => habilitaDisplay(3),
+		  enable_dez_seg => habilitaDisplay(4),
+		  enable_unit_seg => habilitaDisplay(5)	  -- ...
     );
+	 
+	 DISPLAY1: entity work.conversorHex7Seg
+	 port map
+	 (	
+		clk => CLOCK_50,
+		dadoHex => barramentoDadosSaida(3 DOWNTO 0),
+		enable => habilitaDisplay(5),
+      saida7seg => HEX0
+	 );
+	 
+	  DISPLAY2: entity work.conversorHex7Seg
+	 port map
+	 (	
+		clk => CLOCK_50,
+		dadoHex => barramentoDadosSaida(3 DOWNTO 0),
+		enable => habilitaDisplay(4),
+      saida7seg => HEX1
+	 );
+	 
+	 DISPLAY3: entity work.conversorHex7Seg
+	 port map
+	 (	
+		clk => CLOCK_50,
+		dadoHex => barramentoDadosSaida(3 DOWNTO 0),
+		enable => habilitaDisplay(3),
+      saida7seg => HEX2
+	 );
+	 
+	 DISPLAY4: entity work.conversorHex7Seg
+	 port map
+	 (
+		clk => CLOCK_50,
+		dadoHex => barramentoDadosSaida(3 DOWNTO 0),
+		enable => habilitaDisplay(2),
+      saida7seg => HEX3
+	 );
+	 
+	  DISPLAY5: entity work.conversorHex7Seg
+	 port map
+	 (
+		clk => CLOCK_50,
+		dadoHex => barramentoDadosSaida(3 DOWNTO 0),
+		enable => habilitaDisplay(1),
+      saida7seg => HEX4
+	 );
+	 
+	  DISPLAY6: entity work.conversorHex7Seg
+	 port map
+	 (
+		clk => CLOCK_50,
+		dadoHex => barramentoDadosSaida(3 DOWNTO 0),
+		enable => habilitaDisplay(0),
+      saida7seg => HEX5
+	 );
 	 
 	 RAM: entity work.ram
 	 port map
 	 (
-			clk => clk,
+			clk => CLOCK_50,
 			endereco => barramentoEnderecos,
 			dadoEscrita => barramentoDadosSaida,
 			escreve => writeEnable,
+			leitura => readEnable,
 			saida => barramentoDadosEntrada
 	 );
 
@@ -84,10 +153,22 @@ begin
     BASE_TEMPO : entity work.divisorGenerico 
     port map
     (
-        clk             => clk,
-		  divisorin			=> barramentoDadosSaida(7),
-        divisorout      => entradaCPU(7)
+        clk             => CLOCK_50,
+		  divisorin			=> resetBarramento,
+		  switch				=> SW(0),
+        divisorout      => entradaCPU
     );
+	 
+	 BASE_TEMPO_TESTE : entity work.TESTEdivisor 
+    port map
+    (
+        clk             => CLOCK_50,
+		  divisorin			=> '0',
+		  switch				=> '0',
+        divisorout      => testeclock50
+    );
+	 
+	 
 	 
 	 
     -- Completar com a instanciação de demais componentes necessários 

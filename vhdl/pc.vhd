@@ -9,24 +9,22 @@ entity pc is
 	);
     port(
         clk     : in  STD_LOGIC;
-        input     : in  STD_LOGIC_VECTOR(larguraBarramentoDados -1 downto 0);
-        output    : out STD_LOGIC_VECTOR(larguraBarramentoDados -1 downto 0)
+        input     : in  STD_LOGIC_VECTOR(larguraBarramentoDados -1 downto 0) := "00000000";
+        output    : out STD_LOGIC_VECTOR(larguraBarramentoDados -1 downto 0) := "00000000"
     );
 end entity;
 
 architecture arch of pc is
-  signal currentpc : STD_LOGIC_VECTOR(larguraBarramentoDados -1 downto 0) := (others => '0');
 
 begin
-  process (clk) begin
+  process(clk) 
+  begin
   
     if rising_edge(clk) then
-        currentpc <= input; 
+        output <= input; 
 		  
     end if;
+end process;
   
-  end process;
-
-  output <= currentpc;
-
-	end architecture;
+  
+end architecture;

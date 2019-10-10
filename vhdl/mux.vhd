@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity mux is
+entity mux2x1 is
     generic (
         -- Total de bits das entradas e saidas
         larguraDados    : natural  :=   8
@@ -15,18 +15,22 @@ entity mux is
     );
 end entity;
 
-architecture comportamento of mux is
+architecture comportamento of mux2x1 is
 begin
-  -- Para sintetizar lógica combinacional usando um processo,
-  --  todas as entradas do modulo devem aparecer na lista de sensibilidade.
-    process(entradaA_MUX, entradaB_MUX, seletor_MUX) is
-    begin
-     -- If é uma instrução sequencial que não pode ser usada
-     --  na seção de instruções concorrentes da arquitetura.
-        if(seletor_MUX='0') then
-            saida_MUX <= entradaA_MUX;
-        else
-            saida_MUX <= entradaB_MUX;
-        end if;
-    end process;
+
+
+saida_MUX <= entradaA_MUX when seletor_MUX='0' else
+				entradaB_MUX when seletor_MUX='1';
+--  -- Para sintetizar lógica combinacional usando um processo,
+--  --  todas as entradas do modulo devem aparecer na lista de sensibilidade.
+--    process(entradaA_MUX, entradaB_MUX, seletor_MUX) is
+--    begin
+--     -- If é uma instrução sequencial que não pode ser usada
+--     --  na seção de instruções concorrentes da arquitetura.
+--        if(seletor_MUX='0') then
+--            saida_MUX <= entradaA_MUX;
+--        else
+--            saida_MUX <= entradaB_MUX;
+--        end if;
+--    end process;
 end architecture;
