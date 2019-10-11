@@ -19,7 +19,7 @@ entity relogio is
 		  SW : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
 		  
         -- DISPLAYS 7 SEG
-        HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : OUT STD_LOGIC_VECTOR(6 downto 0)
+        HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6 : OUT STD_LOGIC_VECTOR(6 downto 0)
     );
 end entity;
 	
@@ -49,6 +49,8 @@ architecture estrutural of relogio is
 	 
 	 SIGNAL aux		: STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
 	 signal testeclock50 : STD_LOGIC;
+	 
+	 signal saidaHEX : STD_LOGIC_VECTOR(3 downto 0);
 
 begin
 
@@ -65,7 +67,8 @@ begin
 		barramentoDadosSaida => barramentoDadosSaida,
 		resetBarramento => resetBarramento,
 		readEnable => readEnable,
-		writeEnable => writeEnable
+		writeEnable => writeEnable,
+		saidaHEX    => saidaHEX
 	);
     
     -- Instanciação do Decodificador de Endereços
@@ -135,6 +138,15 @@ begin
 		dadoHex => barramentoDadosSaida(3 DOWNTO 0),
 		enable => habilitaDisplay(0),
       saida7seg => HEX5
+	 );
+	 
+	 DISPLAY7: entity work.conversorHex7Seg
+	 port map
+	 (
+		clk => CLOCK_50,
+		dadoHex => saidaHEX,
+		enable => '1',
+      saida7seg => HEX6
 	 );
 	 
 	 RAM: entity work.ram

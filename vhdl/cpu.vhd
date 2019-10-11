@@ -20,7 +20,8 @@ entity cpu is
         barramentoDadosSaida    : OUT STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
 		  resetBarramento			  : OUT STD_LOGIC;
         readEnable              : OUT STD_LOGIC;
-        writeEnable             : OUT STD_LOGIC
+        writeEnable             : OUT STD_LOGIC;
+		  saidaHEX					  : OUT std_logic_vector(3 downto 0)
     );
 end entity;
 
@@ -30,6 +31,7 @@ architecture estrutural of cpu is
     signal saidaROM : STD_LOGIC_VECTOR(17 DOWNTO 0);
 	 signal saidaMUXI, saidaULA1, saidaAcumulador, saidaPC, saidaMuxJump, saidaINC : STD_LOGIC_VECTOR(larguraBarramentoDados-1 DOWNTO 0);
 	 signal saidaFLIPFLOP, saidaULA2 : std_logic;
+	
      
     -- ...
 
@@ -53,7 +55,7 @@ begin
 		Instrucao	  => saidaROM
 	);
 	
-	LEDG <= saidaINC;
+	LEDG <= saidaPC;
 
     -- Instanciação de MUX
     MUXIMEDIATO : entity work.mux2x1
@@ -73,6 +75,7 @@ begin
 	 port map
 	 (
 		clk			=> CLOCK_50,
+		enable	   => saidaROM(16),
 		D				=> saidaULA2,
 		Q				=> saidaFLIPFLOP
 	 );
@@ -81,6 +84,7 @@ begin
 	 
 	 port map
 	 (
+	
 		entrada    => saidaPC,
 		saida 	  => saidaINC
 	 );
@@ -114,7 +118,7 @@ begin
 		  B		  => saidaAcumulador,
 		  OP       => saidaROM(14 DOWNTO 13),
 		  S        => saidaULA1,
-		  CMP 	  => saidaULA2
+		  JE_JNE 	  => saidaULA2
 		  
     );
 	 
@@ -123,6 +127,7 @@ begin
 	 resetBarramento <= saidaROM(17);
 	 readEnable <= saidaROM(8);
 	 writeEnable <= saidaROM(9);
+	 saidaHEX <= "000" & saidaFLIPFLOP;
 
     
     -- Completar com a instanciação de demais 

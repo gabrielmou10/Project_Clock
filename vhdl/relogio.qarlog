@@ -1,0 +1,40 @@
+Quartus Prime Archive log --	D:/intelFPGA_lite/17.1/Relogio/relogio.qarlog
+
+Archive:	D:/intelFPGA_lite/17.1/Relogio/relogio.qar
+Date:		Tue Oct 08 23:01:53 2019
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/intelFPGA_lite/17.1/Relogio/Waveform1.vwf
+D:/intelFPGA_lite/17.1/Relogio/Waveform10.vwf
+D:/intelFPGA_lite/17.1/Relogio/Waveform11.vwf
+D:/intelFPGA_lite/17.1/Relogio/Waveform12.vwf
+D:/intelFPGA_lite/17.1/Relogio/Waveform13.vwf
+D:/intelFPGA_lite/17.1/Relogio/Waveform2.vwf
+D:/intelFPGA_lite/17.1/Relogio/Waveform3.vwf
+D:/intelFPGA_lite/17.1/Relogio/Waveform4.vwf
+D:/intelFPGA_lite/17.1/Relogio/Waveform5.vwf
+D:/intelFPGA_lite/17.1/Relogio/Waveform6.vwf
+D:/intelFPGA_lite/17.1/Relogio/Waveform7.vwf
+D:/intelFPGA_lite/17.1/Relogio/Waveform8.vwf
+D:/intelFPGA_lite/17.1/Relogio/Waveform9.vwf
+D:/intelFPGA_lite/17.1/Relogio/acumulador.vhd
+D:/intelFPGA_lite/17.1/Relogio/conversorHex7Seg.vhd
+D:/intelFPGA_lite/17.1/Relogio/cpu.vhd
+D:/intelFPGA_lite/17.1/Relogio/decoder.vhd
+D:/intelFPGA_lite/17.1/Relogio/divisorGenerico.vhd
+D:/intelFPGA_lite/17.1/Relogio/flipflop.vhd
+D:/intelFPGA_lite/17.1/Relogio/mux.vhd
+D:/intelFPGA_lite/17.1/Relogio/pc.vhd
+D:/intelFPGA_lite/17.1/Relogio/ram.vhd
+D:/intelFPGA_lite/17.1/Relogio/relogio.qpf
+D:/intelFPGA_lite/17.1/Relogio/relogio.qsf
+D:/intelFPGA_lite/17.1/Relogio/relogio.vhd
+D:/intelFPGA_lite/17.1/Relogio/rom.vhd
+D:/intelFPGA_lite/17.1/Relogio/somador.vhd
+D:/intelFPGA_lite/17.1/Relogio/ula.vhd
+d:/intelfpga_lite/17.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 29 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
