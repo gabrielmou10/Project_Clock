@@ -179,7 +179,7 @@ begin
 	 
 	 BASE_TEMPO2 : entity work.divisorGenerico 
 		  generic map(
-		  divisor => 100000
+		  divisor => 10000
 		  )
 	 port map
     (

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for relogio
-Mon Oct 14 21:17:06 2019
+Tue Oct 15 16:05:07 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -60,15 +60,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 14 21:17:06 2019       ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 15 16:05:07 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; relogio                                     ;
 ; Top-level Entity Name              ; relogio                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Total logic elements               ; 3,559                                       ;
 ;     Total combinational functions  ; 1,727                                       ;
-;     Dedicated logic registers      ; 1,901                                       ;
-; Total registers                    ; 1901                                        ;
+;     Dedicated logic registers      ; 1,898                                       ;
+; Total registers                    ; 1898                                        ;
 ; Total pins                         ; 76                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -216,16 +216,16 @@ refer to the applicable agreement for further details.
 ;                                             ;                ;
 ; Total combinational functions               ; 1727           ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 1367           ;
-;     -- 3 input functions                    ; 276            ;
-;     -- <=2 input functions                  ; 84             ;
+;     -- 4 input functions                    ; 1363           ;
+;     -- 3 input functions                    ; 284            ;
+;     -- <=2 input functions                  ; 80             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 1672           ;
-;     -- arithmetic mode                      ; 55             ;
+;     -- normal mode                          ; 1675           ;
+;     -- arithmetic mode                      ; 52             ;
 ;                                             ;                ;
-; Total registers                             ; 1901           ;
-;     -- Dedicated logic registers            ; 1901           ;
+; Total registers                             ; 1898           ;
+;     -- Dedicated logic registers            ; 1898           ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 76             ;
@@ -233,8 +233,8 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 1900           ;
-; Total fan-out                               ; 12275          ;
+; Maximum fan-out                             ; 1897           ;
+; Total fan-out                               ; 12269          ;
 ; Average fan-out                             ; 3.25           ;
 +---------------------------------------------+----------------+
 
@@ -244,7 +244,7 @@ refer to the applicable agreement for further details.
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Entity Name      ; Library Name ;
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+------------------+--------------+
-; |relogio                         ; 1727 (0)            ; 1901 (0)                  ; 0           ; 0            ; 0       ; 0         ; 76   ; 0            ; |relogio                               ; relogio          ; work         ;
+; |relogio                         ; 1727 (0)            ; 1898 (0)                  ; 0           ; 0            ; 0       ; 0         ; 76   ; 0            ; |relogio                               ; relogio          ; work         ;
 ;    |conversorHex7Seg:DISPLAY1|   ; 7 (7)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:DISPLAY1     ; conversorHex7Seg ; work         ;
 ;    |conversorHex7Seg:DISPLAY2|   ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:DISPLAY2     ; conversorHex7Seg ; work         ;
 ;    |conversorHex7Seg:DISPLAY3|   ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:DISPLAY3     ; conversorHex7Seg ; work         ;
@@ -252,19 +252,19 @@ refer to the applicable agreement for further details.
 ;    |conversorHex7Seg:DISPLAY5|   ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:DISPLAY5     ; conversorHex7Seg ; work         ;
 ;    |conversorHex7Seg:DISPLAY6|   ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:DISPLAY6     ; conversorHex7Seg ; work         ;
 ;    |conversorHex7Seg:DISPLAY7|   ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|conversorHex7Seg:DISPLAY7     ; conversorHex7Seg ; work         ;
-;    |cpu:CPU|                     ; 148 (6)             ; 17 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU                       ; cpu              ; work         ;
+;    |cpu:CPU|                     ; 152 (7)             ; 17 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU                       ; cpu              ; work         ;
 ;       |acumulador:ACUMULADOR|    ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|acumulador:ACUMULADOR ; acumulador       ; work         ;
 ;       |flipflop:FLIPFLOP|        ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|flipflop:FLIPFLOP     ; flipflop         ; work         ;
 ;       |mux2x1:MUXIMEDIATO|       ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|mux2x1:MUXIMEDIATO    ; mux2x1           ; work         ;
 ;       |pc:PC|                    ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|pc:PC                 ; pc               ; work         ;
-;       |rom:ROM|                  ; 110 (110)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|rom:ROM               ; rom              ; work         ;
+;       |rom:ROM|                  ; 113 (113)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|rom:ROM               ; rom              ; work         ;
 ;       |ula:ULA|                  ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|ula:ULA               ; ula              ; work         ;
 ;    |decoder:DE|                  ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|decoder:DE                    ; decoder          ; work         ;
-;    |divisorGenerico:BASE_TEMPO2| ; 31 (31)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|divisorGenerico:BASE_TEMPO2   ; divisorGenerico  ; work         ;
+;    |divisorGenerico:BASE_TEMPO2| ; 26 (26)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|divisorGenerico:BASE_TEMPO2   ; divisorGenerico  ; work         ;
 ;    |divisorGenerico:BASE_TEMPO|  ; 49 (49)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|divisorGenerico:BASE_TEMPO    ; divisorGenerico  ; work         ;
 ;    |flipflopReset:FFreset|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|flipflopReset:FFreset         ; flipflopReset    ; work         ;
 ;    |mux1bit:MUXBaseTempo|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|mux1bit:MUXBaseTempo          ; mux1bit          ; work         ;
-;    |ram:RAM|                     ; 1485 (1485)         ; 1792 (1792)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|ram:RAM                       ; ram              ; work         ;
+;    |ram:RAM|                     ; 1486 (1486)         ; 1792 (1792)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|ram:RAM                       ; ram              ; work         ;
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -285,7 +285,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1901  ;
+; Total registers                              ; 1898  ;
 ; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 16    ;
 ; Number of registers using Asynchronous Clear ; 1     ;
@@ -424,11 +424,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +--------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: divisorGenerico:BASE_TEMPO2 ;
-+----------------+--------+------------------------------------------------+
-; Parameter Name ; Value  ; Type                                           ;
-+----------------+--------+------------------------------------------------+
-; divisor        ; 100000 ; Signed Integer                                 ;
-+----------------+--------+------------------------------------------------+
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; divisor        ; 10000 ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -474,25 +474,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 76                          ;
-; cycloneiii_ff         ; 1901                        ;
+; cycloneiii_ff         ; 1898                        ;
 ;     CLR               ; 1                           ;
 ;     ENA               ; 1834                        ;
 ;     ENA SCLR SLD      ; 8                           ;
 ;     SLD               ; 8                           ;
-;     plain             ; 50                          ;
+;     plain             ; 47                          ;
 ; cycloneiii_lcell_comb ; 1729                        ;
-;     arith             ; 55                          ;
-;         2 data inputs ; 48                          ;
+;     arith             ; 52                          ;
+;         2 data inputs ; 45                          ;
 ;         3 data inputs ; 7                           ;
-;     normal            ; 1674                        ;
+;     normal            ; 1677                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 33                          ;
-;         3 data inputs ; 269                         ;
-;         4 data inputs ; 1367                        ;
+;         2 data inputs ; 32                          ;
+;         3 data inputs ; 277                         ;
+;         4 data inputs ; 1363                        ;
 ;                       ;                             ;
 ; Max LUT depth         ; 16.00                       ;
-; Average LUT depth     ; 10.74                       ;
+; Average LUT depth     ; 10.77                       ;
 +-----------------------+-----------------------------+
 
 
@@ -511,7 +511,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Oct 14 21:16:52 2019
+    Info: Processing started: Tue Oct 15 16:04:53 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off relogio -c relogio
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file conversorHex7Seg.vhd
@@ -587,8 +587,8 @@ Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer mux1bit:MUXBaseTempo|saida_MUX File: /home/arqcomp/Documents/Project_Clock/vhdl/mux1bit.vhd Line: 11
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "ram:RAM|registrador" is uninferred due to asynchronous read logic File: /home/arqcomp/Documents/Project_Clock/vhdl/ram.vhd Line: 36
-Warning (113028): 174 out of 256 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: /home/arqcomp/Documents/Project_Clock/vhdl/RomInit.mif Line: 1
-    Warning (113027): Addresses ranging from 82 to 255 are not initialized File: /home/arqcomp/Documents/Project_Clock/vhdl/RomInit.mif Line: 1
+Warning (113028): 170 out of 256 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: /home/arqcomp/Documents/Project_Clock/vhdl/RomInit.mif Line: 1
+    Warning (113027): Addresses ranging from 86 to 255 are not initialized File: /home/arqcomp/Documents/Project_Clock/vhdl/RomInit.mif Line: 1
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX6[1]" is stuck at GND File: /home/arqcomp/Documents/Project_Clock/vhdl/relogio.vhd Line: 22
     Warning (13410): Pin "HEX6[2]" is stuck at GND File: /home/arqcomp/Documents/Project_Clock/vhdl/relogio.vhd Line: 22
@@ -619,9 +619,9 @@ Info (21057): Implemented 3642 device resources after synthesis - the final reso
     Info (21059): Implemented 57 output pins
     Info (21061): Implemented 3566 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
-    Info: Peak virtual memory: 1022 megabytes
-    Info: Processing ended: Mon Oct 14 21:17:06 2019
+    Info: Peak virtual memory: 1016 megabytes
+    Info: Processing ended: Tue Oct 15 16:05:07 2019
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Total CPU time (on all processors): 00:00:25
 
 
