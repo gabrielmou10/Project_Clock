@@ -21,7 +21,8 @@ entity cpu is
 		  resetBarramento			  : OUT STD_LOGIC;
         readEnable              : OUT STD_LOGIC;
         writeEnable             : OUT STD_LOGIC;
-		  saidaHEX					  : OUT std_logic_vector(3 downto 0)
+		  saidaHEX					  : OUT std_logic_vector(3 downto 0);
+		  saidaflipenable         : OUT STD_LOGIC
     );
 end entity;
 
@@ -128,6 +129,7 @@ begin
 	 readEnable <= saidaROM(8);
 	 writeEnable <= saidaROM(9);
 	 saidaHEX <= "000" & saidaFLIPFLOP;
+	 saidaflipenable <= saidaROM(16);
 
     
     -- Completar com a instanciação de demais 

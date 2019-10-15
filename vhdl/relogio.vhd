@@ -56,6 +56,7 @@ architecture estrutural of relogio is
 	 signal saidamuxbasetempo : STD_LOGIC;
 	 signal saidaflipReset   : STD_LOGIC;
 	 signal habilita_BT_read  : STD_LOGIC;
+	 signal habilitadecoder   : std_logic;
 	 
 
 begin
@@ -75,7 +76,8 @@ begin
 		resetBarramento => resetBarramento,
 		readEnable => readEnable,
 		writeEnable => writeEnable,
-		saidaHEX    => saidaHEX
+		saidaHEX    => saidaHEX,
+		saidaflipenable => habilitadecoder
 	);
     
     -- Instanciação do Decodificador de Endereços
@@ -85,6 +87,7 @@ begin
     port map
     (
         enable_decoder  => barramentoEnderecos(7 DOWNTO 5),
+		  enable_geral  =>   habilitadecoder,
 		  enable_dez_hora => habilitaDisplay(0),
         enable_unit_hora => habilitaDisplay(1),
         enable_dez_min => habilitaDisplay(2),
@@ -179,7 +182,7 @@ begin
 	 
 	 BASE_TEMPO2 : entity work.divisorGenerico 
 		  generic map(
-		  divisor => 10000
+		  divisor => 100000
 		  )
 	 port map
     (
