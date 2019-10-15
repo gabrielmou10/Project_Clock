@@ -1,6 +1,6 @@
 Flow report for relogio
-Fri Oct 11 14:56:45 2019
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Mon Oct 14 21:17:46 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -21,7 +21,7 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2017  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Oct 11 14:56:42 2019       ;
-; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Flow Status                        ; Successful - Mon Oct 14 21:17:43 2019       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; relogio                                     ;
 ; Top-level Entity Name              ; relogio                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 102 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 93 / 114,480 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 62 / 114,480 ( < 1 % )                      ;
-; Total registers                    ; 62                                          ;
+; Total logic elements               ; 2,685 / 114,480 ( 2 % )                     ;
+;     Total combinational functions  ; 1,728 / 114,480 ( 2 % )                     ;
+;     Dedicated logic registers      ; 1,901 / 114,480 ( 2 % )                     ;
+; Total registers                    ; 1901                                        ;
 ; Total pins                         ; 76 / 529 ( 14 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/11/2019 14:56:05 ;
+; Start date & time ; 10/14/2019 21:16:52 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; relogio             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 62488674293323.157081656508448         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 5307245821471.157109861228377          ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
 ; NUM_PARALLEL_PROCESSORS             ; 4                                      ; --            ; --          ; --             ;
@@ -90,29 +90,29 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 4796 MB             ; 00:00:27                           ;
-; Fitter                    ; 00:00:20     ; 1.0                     ; 5700 MB             ; 00:00:31                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4684 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4853 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:38     ; --                      ; --                  ; 00:01:04                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 979 MB              ; 00:00:27                           ;
+; Fitter               ; 00:00:32     ; 1.0                     ; 1769 MB             ; 00:00:50                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 826 MB              ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.3                     ; 961 MB              ; 00:00:03                           ;
+; Total                ; 00:00:50     ; --                      ; --                  ; 00:01:23                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                         ;
-+---------------------------+------------------+------------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-0K2BLQJ  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; DESKTOP-0K2BLQJ  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; DESKTOP-0K2BLQJ  ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-0K2BLQJ  ; Windows 10 ; 10.0       ; x86_64         ;
-+---------------------------+------------------+------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++----------------------+------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++----------------------+------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; arqcomp-0x00     ; Ubuntu 18.04.1 ; 18         ; x86_64         ;
+; Fitter               ; arqcomp-0x00     ; Ubuntu 18.04.1 ; 18         ; x86_64         ;
+; Assembler            ; arqcomp-0x00     ; Ubuntu 18.04.1 ; 18         ; x86_64         ;
+; Timing Analyzer      ; arqcomp-0x00     ; Ubuntu 18.04.1 ; 18         ; x86_64         ;
++----------------------+------------------+----------------+------------+----------------+
 
 
 ------------

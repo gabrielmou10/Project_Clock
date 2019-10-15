@@ -1,4 +1,5 @@
 |relogio
+CLOCK_50 => cpu:CPU.CLOCK_50
 CLOCK_50 => conversorhex7seg:DISPLAY1.clk
 CLOCK_50 => conversorhex7seg:DISPLAY2.clk
 CLOCK_50 => conversorhex7seg:DISPLAY3.clk
@@ -8,7 +9,7 @@ CLOCK_50 => conversorhex7seg:DISPLAY6.clk
 CLOCK_50 => conversorhex7seg:DISPLAY7.clk
 CLOCK_50 => ram:RAM.clk
 CLOCK_50 => divisorgenerico:BASE_TEMPO.clk
-CLOCK_50 => testedivisor:BASE_TEMPO_TESTE.clk
+CLOCK_50 => divisorgenerico:BASE_TEMPO2.clk
 LEDG[0] << cpu:CPU.LEDG[0]
 LEDG[1] << cpu:CPU.LEDG[1]
 LEDG[2] << cpu:CPU.LEDG[2]
@@ -17,7 +18,7 @@ LEDG[4] << cpu:CPU.LEDG[4]
 LEDG[5] << cpu:CPU.LEDG[5]
 LEDG[6] << cpu:CPU.LEDG[6]
 LEDG[7] << cpu:CPU.LEDG[7]
-SW[0] => divisorgenerico:BASE_TEMPO.switch
+SW[0] => mux1bit:MUXBaseTempo.seletor_MUX
 SW[1] => ~NO_FANOUT~
 SW[2] => ~NO_FANOUT~
 SW[3] => ~NO_FANOUT~
@@ -395,24 +396,28 @@ enable_decoder[0] => Equal2.IN2
 enable_decoder[0] => Equal3.IN1
 enable_decoder[0] => Equal4.IN1
 enable_decoder[0] => Equal5.IN2
+enable_decoder[0] => Equal6.IN2
 enable_decoder[1] => Equal0.IN2
 enable_decoder[1] => Equal1.IN0
 enable_decoder[1] => Equal2.IN1
 enable_decoder[1] => Equal3.IN0
 enable_decoder[1] => Equal4.IN2
 enable_decoder[1] => Equal5.IN1
+enable_decoder[1] => Equal6.IN1
 enable_decoder[2] => Equal0.IN1
 enable_decoder[2] => Equal1.IN1
 enable_decoder[2] => Equal2.IN0
 enable_decoder[2] => Equal3.IN2
 enable_decoder[2] => Equal4.IN0
 enable_decoder[2] => Equal5.IN0
+enable_decoder[2] => Equal6.IN0
 enable_dez_hora <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 enable_unit_hora <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
 enable_dez_min <= Equal3.DB_MAX_OUTPUT_PORT_TYPE
 enable_unit_min <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
 enable_dez_seg <= Equal4.DB_MAX_OUTPUT_PORT_TYPE
 enable_unit_seg <= Equal5.DB_MAX_OUTPUT_PORT_TYPE
+enable_BT_read <= Equal6.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogio|conversorHex7Seg:DISPLAY1
@@ -1119,91 +1124,6 @@ saida[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogio|divisorGenerico:BASE_TEMPO
-clk => contador[0].CLK
-clk => contador[1].CLK
-clk => contador[2].CLK
-clk => contador[3].CLK
-clk => contador[4].CLK
-clk => contador[5].CLK
-clk => contador[6].CLK
-clk => contador[7].CLK
-clk => contador[8].CLK
-clk => contador[9].CLK
-clk => contador[10].CLK
-clk => contador[11].CLK
-clk => contador[12].CLK
-clk => contador[13].CLK
-clk => contador[14].CLK
-clk => contador[15].CLK
-clk => contador[16].CLK
-clk => contador[17].CLK
-clk => contador[18].CLK
-clk => contador[19].CLK
-clk => contador[20].CLK
-clk => contador[21].CLK
-clk => contador[22].CLK
-clk => contador[23].CLK
-clk => contador[24].CLK
-clk => contador[25].CLK
-clk => divisorout~reg0.CLK
-divisorin => divisorout.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-divisorin => contador.OUTPUTSELECT
-switch => divisorout.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-switch => contador.OUTPUTSELECT
-divisorout <= divisorout~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|relogio|TESTEdivisor:BASE_TEMPO_TESTE
 clk => tick.CLK
 clk => contador[0].CLK
 clk => contador[1].CLK
@@ -1231,8 +1151,49 @@ clk => contador[22].CLK
 clk => contador[23].CLK
 clk => contador[24].CLK
 clk => contador[25].CLK
-divisorin => ~NO_FANOUT~
-switch => ~NO_FANOUT~
-divisorout <= tick.DB_MAX_OUTPUT_PORT_TYPE
+saida_clk <= tick.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|relogio|divisorGenerico:BASE_TEMPO2
+clk => tick.CLK
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+clk => contador[8].CLK
+clk => contador[9].CLK
+clk => contador[10].CLK
+clk => contador[11].CLK
+clk => contador[12].CLK
+clk => contador[13].CLK
+clk => contador[14].CLK
+clk => contador[15].CLK
+clk => contador[16].CLK
+saida_clk <= tick.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|relogio|mux1bit:MUXBaseTempo
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAA
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|relogio|mux1bit:MUXBtRam
+entradaA_MUX => saida_MUX.DATAB
+entradaB_MUX => saida_MUX.DATAA
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|relogio|flipflopReset:FFreset
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

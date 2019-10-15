@@ -22,7 +22,7 @@ type memory_t is array (2**addrWidth -1 downto 0) of std_logic_vector (instrucWi
 signal content: memory_t;
 attribute ram_init_file : string;
 attribute ram_init_file of content:
-signal is "C:\Users\Nicolas Stegmann\Downloads\initROM1.mif";
+signal is "/home/arqcomp/Documents/Project_Clock/vhdl/RomInit.mif";
 
 begin
    Instrucao <= content(to_integer(unsigned(Endereco)));

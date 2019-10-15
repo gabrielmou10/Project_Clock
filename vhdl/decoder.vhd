@@ -15,7 +15,8 @@ entity decoder is
         enable_dez_min : out STD_LOGIC;
 		  enable_unit_min : out STD_LOGIC;
 		  enable_dez_seg : out STD_LOGIC;
-		  enable_unit_seg : out STD_LOGIC
+		  enable_unit_seg : out STD_LOGIC;
+		  enable_BT_read  : out STD_LOGIC
 		  --enable_leit_switch : out STD_LOGIC
     );
 end entity;
@@ -35,6 +36,7 @@ begin
 	enable_dez_min <= '1' when enable_decoder = "100" else '0';
 	enable_dez_seg <= '1' when enable_decoder = "010" else '0';
 	enable_unit_seg <= '1' when enable_decoder = "001" else '0';
+	enable_BT_read <= '1' when enable_decoder = "111" else '0';
 --   
 --	if (enable_decoder = "00") then 
 --		  enable_dez_hora <= '0' ;

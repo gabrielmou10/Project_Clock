@@ -5,15 +5,12 @@ use ieee.numeric_std.all;
 entity divisorGenerico is
 
   generic (
-    divisor1 : natural := 50000000;
-	 divisor2 : natural := 20000000
+    divisor : natural := 50000000
   );
   
   port(
     clk      :   in std_logic;
-	 divisorin :   in std_logic;
-	 switch    :   in std_logic;
-    divisorout :   out std_logic
+    saida_clk :   out std_logic
   );
   
 end entity;
@@ -24,49 +21,19 @@ end entity;
 architecture divInteiro of divisorGenerico is
 
   signal tick : std_logic := '0';
-  signal contador : integer range 0 to divisor1+1 := 0;
+  signal contador : integer range 0 to divisor+1 := 0;
 
 begin
-
-  process(clk)
-  
-  begin
-  
-    if rising_edge(clk) then
-				
-		if (divisorin = '1') then
-			divisorout <= '0';
-			contador <= 0;
-			
-		end if;
-		
-		if (switch = '0') then
-		
-			if (contador >= divisor1) then
-			  
-			  divisorout <= '1';
-			  
-			else
-			  contador <= contador + 1;
-			  
-			  
-			end if;
-			
-		end if;
-		
-		if (switch = '1') then
-		
-			if (contador >= divisor2) then
-			  
-			  divisorout <= '1';
-			  
-			else
-			  contador <= contador + 1;
-			  
-			end if;
-		end if;
-    end if;
-	 
-  end process;
-  
-end architecture divInteiro;
+        process(clk)
+        begin
+            if rising_edge(clk) then
+                if contador = divisor then
+                    contador <= 0;
+                    tick <= not tick;
+                else
+                    contador <= contador + 1;
+                end if;
+            end if;
+        end process;
+    saida_clk <= tick;
+    end architecture divInteiro;
