@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity divisorGenerico is
 
   generic (
-    divisor : natural := 50000000
+    divisor : natural := 25000000
   );
   
   port(

@@ -1,5 +1,5 @@
 Fitter report for relogio
-Tue Oct 15 16:43:56 2019
+Tue Oct 15 19:55:40 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -68,17 +68,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Oct 15 16:43:56 2019       ;
+; Fitter Status                      ; Successful - Tue Oct 15 19:55:40 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; relogio                                     ;
 ; Top-level Entity Name              ; relogio                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2,673 / 114,480 ( 2 % )                     ;
-;     Total combinational functions  ; 1,733 / 114,480 ( 2 % )                     ;
-;     Dedicated logic registers      ; 1,901 / 114,480 ( 2 % )                     ;
-; Total registers                    ; 1901                                        ;
+; Total logic elements               ; 2,692 / 114,480 ( 2 % )                     ;
+;     Total combinational functions  ; 1,731 / 114,480 ( 2 % )                     ;
+;     Dedicated logic registers      ; 1,900 / 114,480 ( 2 % )                     ;
+; Total registers                    ; 1900                                        ;
 ; Total pins                         ; 76 / 529 ( 14 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
@@ -155,14 +155,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.04        ;
+; Average used               ; 1.03        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.4%      ;
-;     Processor 3            ;   1.3%      ;
-;     Processor 4            ;   1.2%      ;
+;     Processor 2            ;   1.1%      ;
+;     Processor 3            ;   1.0%      ;
+;     Processor 4            ;   1.0%      ;
 +----------------------------+-------------+
 
 
@@ -182,8 +182,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 3795 ) ; 0.00 % ( 0 / 3795 )        ; 0.00 % ( 0 / 3795 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 3795 ) ; 0.00 % ( 0 / 3795 )        ; 0.00 % ( 0 / 3795 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 3792 ) ; 0.00 % ( 0 / 3792 )        ; 0.00 % ( 0 / 3792 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 3792 ) ; 0.00 % ( 0 / 3792 )        ; 0.00 % ( 0 / 3792 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -206,7 +206,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 3787 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 3784 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 8 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -222,26 +222,26 @@ The pin-out file can be found in /home/arqcomp/Documents/Project_Clock/vhdl/relo
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 2,673 / 114,480 ( 2 % ) ;
-;     -- Combinational with no register       ; 772                     ;
-;     -- Register only                        ; 940                     ;
-;     -- Combinational with a register        ; 961                     ;
+; Total logic elements                        ; 2,692 / 114,480 ( 2 % ) ;
+;     -- Combinational with no register       ; 792                     ;
+;     -- Register only                        ; 961                     ;
+;     -- Combinational with a register        ; 939                     ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 1371                    ;
-;     -- 3 input functions                    ; 286                     ;
-;     -- <=2 input functions                  ; 76                      ;
-;     -- Register only                        ; 940                     ;
+;     -- 4 input functions                    ; 1367                    ;
+;     -- 3 input functions                    ; 282                     ;
+;     -- <=2 input functions                  ; 82                      ;
+;     -- Register only                        ; 961                     ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 1678                    ;
-;     -- arithmetic mode                      ; 55                      ;
+;     -- normal mode                          ; 1677                    ;
+;     -- arithmetic mode                      ; 54                      ;
 ;                                             ;                         ;
-; Total registers*                            ; 1,901 / 117,053 ( 2 % ) ;
-;     -- Dedicated logic registers            ; 1,901 / 114,480 ( 2 % ) ;
+; Total registers*                            ; 1,900 / 117,053 ( 2 % ) ;
+;     -- Dedicated logic registers            ; 1,900 / 114,480 ( 2 % ) ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )       ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 215 / 7,155 ( 3 % )     ;
+; Total LABs:  partially or completely used   ; 219 / 7,155 ( 3 % )     ;
 ; Virtual pins                                ; 0                       ;
 ; I/O pins                                    ; 76 / 529 ( 14 % )       ;
 ;     -- Clock pins                           ; 2 / 7 ( 29 % )          ;
@@ -259,11 +259,11 @@ The pin-out file can be found in /home/arqcomp/Documents/Project_Clock/vhdl/relo
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
-; Average interconnect usage (total/H/V)      ; 1.2% / 1.1% / 1.3%      ;
-; Peak interconnect usage (total/H/V)         ; 31.0% / 29.8% / 32.7%   ;
-; Maximum fan-out                             ; 1898                    ;
+; Average interconnect usage (total/H/V)      ; 1.3% / 1.2% / 1.4%      ;
+; Peak interconnect usage (total/H/V)         ; 31.6% / 29.8% / 34.2%   ;
+; Maximum fan-out                             ; 1897                    ;
 ; Highest non-global fan-out                  ; 265                     ;
-; Total fan-out                               ; 12763                   ;
+; Total fan-out                               ; 12744                   ;
 ; Average fan-out                             ; 3.00                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -277,26 +277,26 @@ The pin-out file can be found in /home/arqcomp/Documents/Project_Clock/vhdl/relo
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 2673 / 114480 ( 2 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 772                   ; 0                              ;
-;     -- Register only                        ; 940                   ; 0                              ;
-;     -- Combinational with a register        ; 961                   ; 0                              ;
+; Total logic elements                        ; 2692 / 114480 ( 2 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 792                   ; 0                              ;
+;     -- Register only                        ; 961                   ; 0                              ;
+;     -- Combinational with a register        ; 939                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 1371                  ; 0                              ;
-;     -- 3 input functions                    ; 286                   ; 0                              ;
-;     -- <=2 input functions                  ; 76                    ; 0                              ;
-;     -- Register only                        ; 940                   ; 0                              ;
+;     -- 4 input functions                    ; 1367                  ; 0                              ;
+;     -- 3 input functions                    ; 282                   ; 0                              ;
+;     -- <=2 input functions                  ; 82                    ; 0                              ;
+;     -- Register only                        ; 961                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 1678                  ; 0                              ;
-;     -- arithmetic mode                      ; 55                    ; 0                              ;
+;     -- normal mode                          ; 1677                  ; 0                              ;
+;     -- arithmetic mode                      ; 54                    ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total registers                             ; 1901                  ; 0                              ;
-;     -- Dedicated logic registers            ; 1901 / 114480 ( 2 % ) ; 0 / 114480 ( 0 % )             ;
+; Total registers                             ; 1900                  ; 0                              ;
+;     -- Dedicated logic registers            ; 1900 / 114480 ( 2 % ) ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 215 / 7155 ( 3 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 219 / 7155 ( 3 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 76                    ; 0                              ;
@@ -312,8 +312,8 @@ The pin-out file can be found in /home/arqcomp/Documents/Project_Clock/vhdl/relo
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 12759                 ; 4                              ;
-;     -- Registered Connections               ; 4139                  ; 0                              ;
+;     -- Total Connections                    ; 12740                 ; 4                              ;
+;     -- Registered Connections               ; 4124                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
@@ -345,21 +345,21 @@ The pin-out file can be found in /home/arqcomp/Documents/Project_Clock/vhdl/relo
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; CLOCK_50 ; Y2    ; 2        ; 0            ; 36           ; 14           ; 1900                  ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; CLOCK_50 ; Y2    ; 2        ; 0            ; 36           ; 14           ; 1899                  ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
 ; SW[0]    ; AB28  ; 5        ; 115          ; 17           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; SW[10]   ; K1    ; 1        ; 0            ; 54           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[11]   ; G14   ; 8        ; 47           ; 73           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[12]   ; AG25  ; 4        ; 91           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[13]   ; C26   ; 7        ; 113          ; 73           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[11]   ; D10   ; 8        ; 35           ; 73           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[12]   ; AE1   ; 2        ; 0            ; 16           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[13]   ; C5    ; 8        ; 3            ; 73           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; SW[14]   ; B4    ; 8        ; 7            ; 73           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; SW[15]   ; D8    ; 8        ; 16           ; 73           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[16]   ; B6    ; 8        ; 27           ; 73           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[16]   ; D13   ; 8        ; 54           ; 73           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; SW[17]   ; AA14  ; 3        ; 54           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; SW[1]    ; AG15  ; 4        ; 58           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; SW[2]    ; AH15  ; 4        ; 58           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; SW[3]    ; H3    ; 1        ; 0            ; 62           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; SW[4]    ; AH25  ; 4        ; 91           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; SW[5]    ; D4    ; 8        ; 1            ; 73           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; SW[5]    ; E4    ; 8        ; 1            ; 73           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; SW[6]    ; J25   ; 6        ; 115          ; 51           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; SW[7]    ; AE2   ; 2        ; 0            ; 17           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; SW[8]    ; E7    ; 8        ; 13           ; 73           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
@@ -449,7 +449,6 @@ The pin-out file can be found in /home/arqcomp/Documents/Project_Clock/vhdl/relo
 ; P23      ; MSEL1                                   ; -                        ; -                       ; Dedicated Programming Pin ;
 ; M22      ; MSEL2                                   ; -                        ; -                       ; Dedicated Programming Pin ;
 ; P22      ; MSEL3                                   ; -                        ; -                       ; Dedicated Programming Pin ;
-; B6       ; DIFFIO_T17p, DATA6                      ; Use as regular IO        ; SW[16]                  ; Dual Purpose Pin          ;
 ; B4       ; DIFFIO_T4p, DATA12, DQS1T/CQ1T#,CDPCLK7 ; Use as regular IO        ; SW[14]                  ; Dual Purpose Pin          ;
 +----------+-----------------------------------------+--------------------------+-------------------------+---------------------------+
 
@@ -460,13 +459,13 @@ The pin-out file can be found in /home/arqcomp/Documents/Project_Clock/vhdl/relo
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
 ; 1        ; 6 / 56 ( 11 % )  ; 2.5V          ; --           ;
-; 2        ; 2 / 63 ( 3 % )   ; 2.5V          ; --           ;
+; 2        ; 3 / 63 ( 5 % )   ; 2.5V          ; --           ;
 ; 3        ; 1 / 73 ( 1 % )   ; 2.5V          ; --           ;
-; 4        ; 30 / 71 ( 42 % ) ; 3.3V          ; --           ;
+; 4        ; 29 / 71 ( 41 % ) ; 3.3V          ; --           ;
 ; 5        ; 16 / 65 ( 25 % ) ; 2.5V          ; --           ;
 ; 6        ; 6 / 58 ( 10 % )  ; 2.5V          ; --           ;
-; 7        ; 13 / 72 ( 18 % ) ; 2.5V          ; --           ;
-; 8        ; 6 / 71 ( 8 % )   ; 2.5V          ; --           ;
+; 7        ; 12 / 72 ( 17 % ) ; 2.5V          ; --           ;
+; 8        ; 7 / 71 ( 10 % )  ; 2.5V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -613,7 +612,7 @@ The pin-out file can be found in /home/arqcomp/Documents/Project_Clock/vhdl/relo
 ; AD26     ; 281        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AD27     ; 286        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AD28     ; 285        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; AE1      ; 106        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; AE1      ; 106        ; 2        ; SW[12]                                                    ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; AE2      ; 105        ; 2        ; SW[7]                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; AE3      ; 122        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AE4      ; 132        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -693,7 +692,7 @@ The pin-out file can be found in /home/arqcomp/Documents/Project_Clock/vhdl/relo
 ; AG22     ; 227        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG23     ; 229        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG24     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AG25     ; 245        ; 4        ; SW[12]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AG25     ; 245        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG26     ; 270        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG27     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG28     ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -728,7 +727,7 @@ The pin-out file can be found in /home/arqcomp/Documents/Project_Clock/vhdl/relo
 ; B3       ; 534        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B4       ; 533        ; 8        ; SW[14]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B5       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; B6       ; 505        ; 8        ; SW[16]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B6       ; 505        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B7       ; 502        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B8       ; 518        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B9       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -755,7 +754,7 @@ The pin-out file can be found in /home/arqcomp/Documents/Project_Clock/vhdl/relo
 ; C2       ; 1          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; C3       ; 543        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C4       ; 539        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; C5       ; 538        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; C5       ; 538        ; 8        ; SW[13]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C6       ; 536        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C7       ; 521        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C8       ; 519        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -776,22 +775,22 @@ The pin-out file can be found in /home/arqcomp/Documents/Project_Clock/vhdl/relo
 ; C23      ; 415        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C24      ; 416        ; 7        ; SW[9]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C25      ; 411        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; C26      ; 400        ; 7        ; SW[13]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C26      ; 400        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C27      ; 382        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; C28      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; D1       ; 3          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; D2       ; 2          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; D3       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; D4       ; 540        ; 8        ; SW[5]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D4       ; 540        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D5       ; 537        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D6       ; 524        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D7       ; 522        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D8       ; 520        ; 8        ; SW[15]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D9       ; 511        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; D10      ; 496        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; D10      ; 496        ; 8        ; SW[11]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D11      ; 509        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D12      ; 479        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; D13      ; 475        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; D13      ; 475        ; 8        ; SW[16]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D14      ; 477        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D15      ; 469        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D16      ; 461        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -810,7 +809,7 @@ The pin-out file can be found in /home/arqcomp/Documents/Project_Clock/vhdl/relo
 ; E1       ; 17         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; E2       ; 16         ; 1        ; ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; E3       ; 7          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; E4       ; 541        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; E4       ; 541        ; 8        ; SW[5]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E5       ; 542        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E6       ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; E7       ; 523        ; 8        ; SW[8]                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
@@ -876,7 +875,7 @@ The pin-out file can be found in /home/arqcomp/Documents/Project_Clock/vhdl/relo
 ; G11      ; 506        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G12      ; 503        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; G13      ; 493        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; G14      ; 484        ; 8        ; SW[11]                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G14      ; 484        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; G15      ; 457        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; G16      ; 453        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G17      ; 437        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -1306,27 +1305,27 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node       ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                    ; Entity Name      ; Library Name ;
 +----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------+------------------+--------------+
-; |relogio                         ; 2673 (0)    ; 1901 (0)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 76   ; 0            ; 772 (0)      ; 940 (0)           ; 961 (0)          ; |relogio                               ; relogio          ; work         ;
-;    |conversorHex7Seg:DISPLAY1|   ; 14 (14)     ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 7 (7)             ; 4 (4)            ; |relogio|conversorHex7Seg:DISPLAY1     ; conversorHex7Seg ; work         ;
+; |relogio                         ; 2692 (0)    ; 1900 (0)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 76   ; 0            ; 792 (0)      ; 961 (0)           ; 939 (0)          ; |relogio                               ; relogio          ; work         ;
+;    |conversorHex7Seg:DISPLAY1|   ; 14 (14)     ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 7 (7)             ; 6 (6)            ; |relogio|conversorHex7Seg:DISPLAY1     ; conversorHex7Seg ; work         ;
 ;    |conversorHex7Seg:DISPLAY2|   ; 7 (7)       ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 7 (7)             ; 0 (0)            ; |relogio|conversorHex7Seg:DISPLAY2     ; conversorHex7Seg ; work         ;
 ;    |conversorHex7Seg:DISPLAY3|   ; 7 (7)       ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 7 (7)             ; 0 (0)            ; |relogio|conversorHex7Seg:DISPLAY3     ; conversorHex7Seg ; work         ;
 ;    |conversorHex7Seg:DISPLAY4|   ; 7 (7)       ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 7 (7)             ; 0 (0)            ; |relogio|conversorHex7Seg:DISPLAY4     ; conversorHex7Seg ; work         ;
 ;    |conversorHex7Seg:DISPLAY5|   ; 7 (7)       ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 7 (7)             ; 0 (0)            ; |relogio|conversorHex7Seg:DISPLAY5     ; conversorHex7Seg ; work         ;
-;    |conversorHex7Seg:DISPLAY6|   ; 7 (7)       ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 4 (4)            ; |relogio|conversorHex7Seg:DISPLAY6     ; conversorHex7Seg ; work         ;
+;    |conversorHex7Seg:DISPLAY6|   ; 7 (7)       ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 6 (6)            ; |relogio|conversorHex7Seg:DISPLAY6     ; conversorHex7Seg ; work         ;
 ;    |conversorHex7Seg:DISPLAY7|   ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; |relogio|conversorHex7Seg:DISPLAY7     ; conversorHex7Seg ; work         ;
-;    |cpu:CPU|                     ; 153 (7)     ; 17 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 132 (6)      ; 0 (0)             ; 21 (1)           ; |relogio|cpu:CPU                       ; cpu              ; work         ;
+;    |cpu:CPU|                     ; 154 (6)     ; 17 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 134 (4)      ; 0 (0)             ; 20 (2)           ; |relogio|cpu:CPU                       ; cpu              ; work         ;
 ;       |acumulador:ACUMULADOR|    ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 8 (8)            ; |relogio|cpu:CPU|acumulador:ACUMULADOR ; acumulador       ; work         ;
 ;       |flipflop:FLIPFLOP|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |relogio|cpu:CPU|flipflop:FLIPFLOP     ; flipflop         ; work         ;
 ;       |mux2x1:MUXIMEDIATO|       ; 10 (10)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; |relogio|cpu:CPU|mux2x1:MUXIMEDIATO    ; mux2x1           ; work         ;
 ;       |pc:PC|                    ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 8 (8)            ; |relogio|cpu:CPU|pc:PC                 ; pc               ; work         ;
-;       |rom:ROM|                  ; 114 (114)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 111 (111)    ; 0 (0)             ; 3 (3)            ; |relogio|cpu:CPU|rom:ROM               ; rom              ; work         ;
+;       |rom:ROM|                  ; 116 (116)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 115 (115)    ; 0 (0)             ; 1 (1)            ; |relogio|cpu:CPU|rom:ROM               ; rom              ; work         ;
 ;       |ula:ULA|                  ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; |relogio|cpu:CPU|ula:ULA               ; ula              ; work         ;
 ;    |decoder:DE|                  ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; |relogio|decoder:DE                    ; decoder          ; work         ;
-;    |divisorGenerico:BASE_TEMPO2| ; 30 (30)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 18 (18)          ; |relogio|divisorGenerico:BASE_TEMPO2   ; divisorGenerico  ; work         ;
-;    |divisorGenerico:BASE_TEMPO|  ; 49 (49)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (22)      ; 0 (0)             ; 27 (27)          ; |relogio|divisorGenerico:BASE_TEMPO    ; divisorGenerico  ; work         ;
+;    |divisorGenerico:BASE_TEMPO2| ; 31 (31)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 18 (18)          ; |relogio|divisorGenerico:BASE_TEMPO2   ; divisorGenerico  ; work         ;
+;    |divisorGenerico:BASE_TEMPO|  ; 47 (47)     ; 26 (26)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 0 (0)             ; 26 (26)          ; |relogio|divisorGenerico:BASE_TEMPO    ; divisorGenerico  ; work         ;
 ;    |flipflopReset:FFreset|       ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |relogio|flipflopReset:FFreset         ; flipflopReset    ; work         ;
 ;    |mux1bit:MUXBaseTempo|        ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |relogio|mux1bit:MUXBaseTempo          ; mux1bit          ; work         ;
-;    |ram:RAM|                     ; 2388 (2388) ; 1792 (1792)               ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 596 (596)    ; 898 (898)         ; 894 (894)        ; |relogio|ram:RAM                       ; ram              ; work         ;
+;    |ram:RAM|                     ; 2408 (2408) ; 1792 (1792)               ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 616 (616)    ; 921 (921)         ; 871 (871)        ; |relogio|ram:RAM                       ; ram              ; work         ;
 +----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1448,276 +1447,276 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                           ; Location            ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50                       ; PIN_Y2              ; 1898    ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; CLOCK_50                       ; PIN_Y2              ; 1897    ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
 ; CLOCK_50                       ; PIN_Y2              ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; cpu:CPU|comb~7                 ; LCCOMB_X90_Y9_N12   ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; cpu:CPU|rom:ROM|content~100    ; LCCOMB_X90_Y9_N10   ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; cpu:CPU|rom:ROM|content~110    ; LCCOMB_X85_Y9_N24   ; 1       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; cpu:CPU|rom:ROM|content~117    ; LCCOMB_X85_Y9_N30   ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; cpu:CPU|rom:ROM|content~85     ; LCCOMB_X85_Y9_N16   ; 9       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; decoder:DE|enable_dez_hora     ; LCCOMB_X94_Y6_N16   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; decoder:DE|enable_dez_min      ; LCCOMB_X94_Y16_N10  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; decoder:DE|enable_dez_seg      ; LCCOMB_X101_Y11_N24 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; decoder:DE|enable_unit_hora    ; LCCOMB_X94_Y6_N6    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; decoder:DE|enable_unit_min     ; LCCOMB_X94_Y6_N20   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; decoder:DE|enable_unit_seg     ; LCCOMB_X94_Y16_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mux1bit:MUXBaseTempo|saida_MUX ; LCCOMB_X29_Y33_N8   ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3001       ; LCCOMB_X88_Y17_N18  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3004       ; LCCOMB_X85_Y15_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3005       ; LCCOMB_X88_Y17_N16  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3006       ; LCCOMB_X87_Y17_N20  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3008       ; LCCOMB_X88_Y14_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3010       ; LCCOMB_X82_Y14_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3011       ; LCCOMB_X82_Y14_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3012       ; LCCOMB_X89_Y14_N28  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3014       ; LCCOMB_X91_Y13_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3016       ; LCCOMB_X82_Y16_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3017       ; LCCOMB_X83_Y17_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3018       ; LCCOMB_X89_Y14_N10  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3020       ; LCCOMB_X86_Y15_N28  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3022       ; LCCOMB_X84_Y17_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3023       ; LCCOMB_X85_Y17_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3024       ; LCCOMB_X87_Y17_N10  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3026       ; LCCOMB_X91_Y15_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3028       ; LCCOMB_X86_Y15_N14  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3029       ; LCCOMB_X87_Y16_N16  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3030       ; LCCOMB_X91_Y15_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3031       ; LCCOMB_X92_Y10_N14  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3032       ; LCCOMB_X83_Y12_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3033       ; LCCOMB_X85_Y16_N20  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3034       ; LCCOMB_X91_Y12_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3035       ; LCCOMB_X90_Y12_N18  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3036       ; LCCOMB_X87_Y12_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3037       ; LCCOMB_X86_Y12_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3038       ; LCCOMB_X90_Y16_N18  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3039       ; LCCOMB_X92_Y13_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3040       ; LCCOMB_X83_Y12_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3041       ; LCCOMB_X84_Y13_N10  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3042       ; LCCOMB_X91_Y12_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3044       ; LCCOMB_X92_Y13_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3046       ; LCCOMB_X80_Y12_N20  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3047       ; LCCOMB_X85_Y16_N10  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3048       ; LCCOMB_X92_Y13_N14  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3049       ; LCCOMB_X89_Y16_N28  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3050       ; LCCOMB_X84_Y17_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3051       ; LCCOMB_X87_Y16_N18  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3052       ; LCCOMB_X89_Y16_N14  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3053       ; LCCOMB_X90_Y12_N10  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3054       ; LCCOMB_X85_Y17_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3055       ; LCCOMB_X87_Y16_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3056       ; LCCOMB_X88_Y14_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3057       ; LCCOMB_X88_Y16_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3058       ; LCCOMB_X81_Y16_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3059       ; LCCOMB_X88_Y16_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3060       ; LCCOMB_X92_Y16_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3062       ; LCCOMB_X92_Y13_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3064       ; LCCOMB_X81_Y15_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3065       ; LCCOMB_X82_Y16_N16  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3066       ; LCCOMB_X92_Y12_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3067       ; LCCOMB_X90_Y16_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3068       ; LCCOMB_X85_Y17_N18  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3069       ; LCCOMB_X83_Y15_N14  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3070       ; LCCOMB_X91_Y16_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3071       ; LCCOMB_X91_Y13_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3072       ; LCCOMB_X80_Y15_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3073       ; LCCOMB_X83_Y15_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3074       ; LCCOMB_X92_Y15_N28  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3075       ; LCCOMB_X90_Y14_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3076       ; LCCOMB_X88_Y15_N18  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3077       ; LCCOMB_X85_Y15_N10  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3078       ; LCCOMB_X91_Y16_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3081       ; LCCOMB_X90_Y7_N8    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3084       ; LCCOMB_X86_Y8_N30   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3085       ; LCCOMB_X79_Y9_N8    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3086       ; LCCOMB_X85_Y10_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3088       ; LCCOMB_X88_Y7_N24   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3090       ; LCCOMB_X80_Y6_N8    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3091       ; LCCOMB_X87_Y6_N26   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3092       ; LCCOMB_X81_Y6_N10   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3094       ; LCCOMB_X88_Y7_N22   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3096       ; LCCOMB_X89_Y5_N2    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3097       ; LCCOMB_X88_Y6_N30   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3098       ; LCCOMB_X84_Y7_N30   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3100       ; LCCOMB_X91_Y9_N4    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3102       ; LCCOMB_X86_Y8_N28   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3103       ; LCCOMB_X85_Y8_N18   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3104       ; LCCOMB_X81_Y5_N8    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3106       ; LCCOMB_X83_Y6_N8    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3108       ; LCCOMB_X77_Y8_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3109       ; LCCOMB_X81_Y9_N22   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3110       ; LCCOMB_X82_Y6_N16   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3111       ; LCCOMB_X83_Y11_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3112       ; LCCOMB_X80_Y8_N4    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3113       ; LCCOMB_X77_Y9_N2    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3114       ; LCCOMB_X81_Y11_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3115       ; LCCOMB_X79_Y8_N22   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3116       ; LCCOMB_X77_Y8_N14   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3117       ; LCCOMB_X79_Y8_N6    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3118       ; LCCOMB_X84_Y8_N10   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3119       ; LCCOMB_X82_Y10_N20  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3120       ; LCCOMB_X82_Y8_N28   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3121       ; LCCOMB_X82_Y8_N0    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3122       ; LCCOMB_X84_Y8_N14   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3124       ; LCCOMB_X79_Y11_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3126       ; LCCOMB_X81_Y6_N22   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3127       ; LCCOMB_X80_Y6_N26   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3128       ; LCCOMB_X79_Y7_N0    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3129       ; LCCOMB_X80_Y7_N4    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3130       ; LCCOMB_X81_Y7_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3131       ; LCCOMB_X80_Y8_N30   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3132       ; LCCOMB_X82_Y7_N8    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3133       ; LCCOMB_X79_Y7_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3134       ; LCCOMB_X81_Y7_N2    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3135       ; LCCOMB_X80_Y7_N26   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3136       ; LCCOMB_X82_Y7_N18   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3137       ; LCCOMB_X80_Y10_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3138       ; LCCOMB_X81_Y5_N10   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3139       ; LCCOMB_X81_Y8_N22   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3140       ; LCCOMB_X82_Y8_N4    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3142       ; LCCOMB_X84_Y7_N8    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3144       ; LCCOMB_X85_Y5_N28   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3145       ; LCCOMB_X86_Y7_N30   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3146       ; LCCOMB_X85_Y6_N20   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3147       ; LCCOMB_X90_Y5_N28   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3148       ; LCCOMB_X88_Y5_N6    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3149       ; LCCOMB_X90_Y5_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3150       ; LCCOMB_X90_Y6_N28   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3151       ; LCCOMB_X91_Y6_N10   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3152       ; LCCOMB_X88_Y5_N20   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3153       ; LCCOMB_X87_Y5_N6    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3154       ; LCCOMB_X91_Y6_N2    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3155       ; LCCOMB_X92_Y7_N20   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3156       ; LCCOMB_X88_Y8_N2    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3157       ; LCCOMB_X89_Y11_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3158       ; LCCOMB_X85_Y6_N6    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3159       ; LCCOMB_X88_Y10_N18  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3160       ; LCCOMB_X82_Y11_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3161       ; LCCOMB_X80_Y10_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3162       ; LCCOMB_X89_Y10_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3163       ; LCCOMB_X91_Y9_N24   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3164       ; LCCOMB_X82_Y11_N20  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3165       ; LCCOMB_X82_Y11_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3166       ; LCCOMB_X88_Y7_N6    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3167       ; LCCOMB_X88_Y7_N2    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3168       ; LCCOMB_X83_Y7_N30   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3169       ; LCCOMB_X83_Y7_N8    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3170       ; LCCOMB_X88_Y7_N30   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3171       ; LCCOMB_X85_Y10_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3172       ; LCCOMB_X77_Y11_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3173       ; LCCOMB_X77_Y11_N28  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3174       ; LCCOMB_X85_Y10_N10  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3175       ; LCCOMB_X88_Y13_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3176       ; LCCOMB_X83_Y14_N20  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3177       ; LCCOMB_X84_Y13_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3178       ; LCCOMB_X89_Y11_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3179       ; LCCOMB_X85_Y5_N22   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3180       ; LCCOMB_X84_Y10_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3181       ; LCCOMB_X84_Y9_N14   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3182       ; LCCOMB_X85_Y7_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3183       ; LCCOMB_X85_Y5_N24   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3184       ; LCCOMB_X84_Y10_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3185       ; LCCOMB_X84_Y9_N30   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3186       ; LCCOMB_X85_Y7_N20   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3187       ; LCCOMB_X94_Y10_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3188       ; LCCOMB_X83_Y12_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3189       ; LCCOMB_X83_Y12_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3190       ; LCCOMB_X90_Y10_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3191       ; LCCOMB_X86_Y10_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3192       ; LCCOMB_X82_Y9_N20   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3193       ; LCCOMB_X82_Y9_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3194       ; LCCOMB_X94_Y10_N28  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3195       ; LCCOMB_X89_Y12_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3196       ; LCCOMB_X80_Y14_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3197       ; LCCOMB_X83_Y14_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3198       ; LCCOMB_X89_Y12_N20  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3199       ; LCCOMB_X87_Y6_N6    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3200       ; LCCOMB_X87_Y13_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3201       ; LCCOMB_X86_Y12_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3202       ; LCCOMB_X94_Y9_N2    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3203       ; LCCOMB_X87_Y14_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3204       ; LCCOMB_X80_Y14_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3205       ; LCCOMB_X86_Y14_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3206       ; LCCOMB_X87_Y14_N18  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3207       ; LCCOMB_X86_Y5_N24   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3208       ; LCCOMB_X83_Y12_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3209       ; LCCOMB_X83_Y6_N2    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3210       ; LCCOMB_X86_Y7_N16   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3211       ; LCCOMB_X92_Y7_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3212       ; LCCOMB_X81_Y15_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3213       ; LCCOMB_X81_Y11_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3214       ; LCCOMB_X92_Y11_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3215       ; LCCOMB_X86_Y5_N10   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3216       ; LCCOMB_X84_Y11_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3217       ; LCCOMB_X83_Y11_N10  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3218       ; LCCOMB_X90_Y6_N30   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3219       ; LCCOMB_X89_Y10_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3220       ; LCCOMB_X85_Y11_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3221       ; LCCOMB_X82_Y10_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3222       ; LCCOMB_X90_Y10_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3223       ; LCCOMB_X88_Y11_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3224       ; LCCOMB_X81_Y14_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3225       ; LCCOMB_X88_Y11_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3226       ; LCCOMB_X86_Y15_N10  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3227       ; LCCOMB_X90_Y7_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3228       ; LCCOMB_X83_Y8_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3229       ; LCCOMB_X89_Y6_N6    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3230       ; LCCOMB_X90_Y13_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3231       ; LCCOMB_X91_Y7_N4    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3232       ; LCCOMB_X83_Y16_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3233       ; LCCOMB_X90_Y8_N18   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3234       ; LCCOMB_X90_Y13_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3235       ; LCCOMB_X85_Y14_N28  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3236       ; LCCOMB_X81_Y14_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3237       ; LCCOMB_X82_Y6_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3238       ; LCCOMB_X85_Y14_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3239       ; LCCOMB_X92_Y12_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3240       ; LCCOMB_X82_Y12_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3241       ; LCCOMB_X81_Y9_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3242       ; LCCOMB_X80_Y15_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3243       ; LCCOMB_X88_Y10_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3244       ; LCCOMB_X87_Y12_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3245       ; LCCOMB_X86_Y15_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3246       ; LCCOMB_X80_Y15_N28  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3247       ; LCCOMB_X80_Y11_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3248       ; LCCOMB_X83_Y10_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3249       ; LCCOMB_X83_Y10_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3250       ; LCCOMB_X80_Y11_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3251       ; LCCOMB_X92_Y10_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3252       ; LCCOMB_X82_Y12_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3253       ; LCCOMB_X81_Y10_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3254       ; LCCOMB_X88_Y12_N20  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3255       ; LCCOMB_X83_Y17_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3256       ; LCCOMB_X83_Y8_N26   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3257       ; LCCOMB_X88_Y15_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3258       ; LCCOMB_X79_Y11_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3259       ; LCCOMB_X79_Y11_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3260       ; LCCOMB_X80_Y12_N16  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3261       ; LCCOMB_X80_Y12_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3262       ; LCCOMB_X79_Y13_N16  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3263       ; LCCOMB_X80_Y9_N8    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3264       ; LCCOMB_X81_Y10_N16  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3265       ; LCCOMB_X80_Y9_N26   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3266       ; LCCOMB_X79_Y13_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3267       ; LCCOMB_X86_Y17_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3268       ; LCCOMB_X81_Y16_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3269       ; LCCOMB_X84_Y16_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3270       ; LCCOMB_X84_Y16_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3271       ; LCCOMB_X91_Y8_N26   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3272       ; LCCOMB_X92_Y6_N2    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3273       ; LCCOMB_X91_Y8_N18   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3274       ; LCCOMB_X91_Y8_N22   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3275       ; LCCOMB_X91_Y11_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3276       ; LCCOMB_X89_Y6_N18   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3277       ; LCCOMB_X89_Y5_N30   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3278       ; LCCOMB_X92_Y11_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3279       ; LCCOMB_X90_Y8_N16   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3280       ; LCCOMB_X91_Y7_N2    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3281       ; LCCOMB_X90_Y8_N26   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3282       ; LCCOMB_X91_Y7_N24   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3283       ; LCCOMB_X91_Y11_N10  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3284       ; LCCOMB_X89_Y8_N8    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3285       ; LCCOMB_X89_Y8_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ram:RAM|registrador~3286       ; LCCOMB_X90_Y11_N28  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; cpu:CPU|comb~5                 ; LCCOMB_X76_Y15_N14  ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; cpu:CPU|rom:ROM|content~106    ; LCCOMB_X80_Y16_N22  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; cpu:CPU|rom:ROM|content~117    ; LCCOMB_X84_Y13_N2   ; 1       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; cpu:CPU|rom:ROM|content~86     ; LCCOMB_X84_Y15_N12  ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; cpu:CPU|rom:ROM|content~90     ; LCCOMB_X83_Y19_N12  ; 9       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; decoder:DE|enable_dez_hora     ; LCCOMB_X98_Y7_N26   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; decoder:DE|enable_dez_min      ; LCCOMB_X107_Y16_N22 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; decoder:DE|enable_dez_seg      ; LCCOMB_X107_Y22_N6  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; decoder:DE|enable_unit_hora    ; LCCOMB_X98_Y7_N8    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; decoder:DE|enable_unit_min     ; LCCOMB_X107_Y16_N0  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; decoder:DE|enable_unit_seg     ; LCCOMB_X107_Y22_N20 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mux1bit:MUXBaseTempo|saida_MUX ; LCCOMB_X63_Y17_N14  ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3001       ; LCCOMB_X92_Y15_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3004       ; LCCOMB_X88_Y12_N16  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3005       ; LCCOMB_X92_Y12_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3006       ; LCCOMB_X91_Y11_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3008       ; LCCOMB_X91_Y12_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3010       ; LCCOMB_X92_Y13_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3011       ; LCCOMB_X91_Y12_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3012       ; LCCOMB_X90_Y16_N14  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3014       ; LCCOMB_X92_Y15_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3016       ; LCCOMB_X92_Y13_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3017       ; LCCOMB_X92_Y11_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3018       ; LCCOMB_X92_Y11_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3020       ; LCCOMB_X95_Y12_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3022       ; LCCOMB_X91_Y9_N30   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3023       ; LCCOMB_X92_Y12_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3024       ; LCCOMB_X91_Y13_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3026       ; LCCOMB_X89_Y9_N24   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3028       ; LCCOMB_X91_Y10_N14  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3029       ; LCCOMB_X88_Y11_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3030       ; LCCOMB_X89_Y9_N6    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3031       ; LCCOMB_X88_Y17_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3032       ; LCCOMB_X89_Y10_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3033       ; LCCOMB_X90_Y11_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3034       ; LCCOMB_X90_Y13_N14  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3035       ; LCCOMB_X87_Y14_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3036       ; LCCOMB_X91_Y14_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3037       ; LCCOMB_X91_Y11_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3038       ; LCCOMB_X90_Y13_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3039       ; LCCOMB_X84_Y18_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3040       ; LCCOMB_X85_Y10_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3041       ; LCCOMB_X86_Y11_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3042       ; LCCOMB_X88_Y9_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3044       ; LCCOMB_X91_Y17_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3046       ; LCCOMB_X90_Y15_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3047       ; LCCOMB_X90_Y11_N10  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3048       ; LCCOMB_X89_Y16_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3049       ; LCCOMB_X88_Y10_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3050       ; LCCOMB_X91_Y9_N0    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3051       ; LCCOMB_X91_Y10_N28  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3052       ; LCCOMB_X88_Y10_N10  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3053       ; LCCOMB_X88_Y14_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3054       ; LCCOMB_X86_Y12_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3055       ; LCCOMB_X88_Y11_N14  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3056       ; LCCOMB_X88_Y13_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3057       ; LCCOMB_X90_Y10_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3058       ; LCCOMB_X90_Y14_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3059       ; LCCOMB_X90_Y10_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3060       ; LCCOMB_X89_Y16_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3062       ; LCCOMB_X89_Y18_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3064       ; LCCOMB_X88_Y17_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3065       ; LCCOMB_X88_Y17_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3066       ; LCCOMB_X89_Y18_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3067       ; LCCOMB_X90_Y17_N16  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3068       ; LCCOMB_X92_Y14_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3069       ; LCCOMB_X91_Y14_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3070       ; LCCOMB_X90_Y17_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3071       ; LCCOMB_X87_Y15_N14  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3072       ; LCCOMB_X91_Y16_N14  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3073       ; LCCOMB_X85_Y15_N14  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3074       ; LCCOMB_X91_Y16_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3075       ; LCCOMB_X89_Y17_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3076       ; LCCOMB_X92_Y14_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3077       ; LCCOMB_X88_Y17_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3078       ; LCCOMB_X91_Y13_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3081       ; LCCOMB_X81_Y19_N20  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3084       ; LCCOMB_X85_Y11_N14  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3085       ; LCCOMB_X85_Y11_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3086       ; LCCOMB_X86_Y16_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3088       ; LCCOMB_X82_Y17_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3090       ; LCCOMB_X76_Y10_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3091       ; LCCOMB_X80_Y10_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3092       ; LCCOMB_X80_Y16_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3094       ; LCCOMB_X81_Y14_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3096       ; LCCOMB_X80_Y9_N8    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3097       ; LCCOMB_X80_Y12_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3098       ; LCCOMB_X80_Y16_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3100       ; LCCOMB_X81_Y14_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3102       ; LCCOMB_X76_Y10_N14  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3103       ; LCCOMB_X80_Y10_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3104       ; LCCOMB_X82_Y14_N18  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3106       ; LCCOMB_X76_Y12_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3108       ; LCCOMB_X77_Y11_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3109       ; LCCOMB_X77_Y12_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3110       ; LCCOMB_X76_Y12_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3111       ; LCCOMB_X81_Y16_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3112       ; LCCOMB_X79_Y11_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3113       ; LCCOMB_X79_Y14_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3114       ; LCCOMB_X82_Y12_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3115       ; LCCOMB_X77_Y15_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3116       ; LCCOMB_X77_Y11_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3117       ; LCCOMB_X77_Y15_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3118       ; LCCOMB_X81_Y12_N10  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3119       ; LCCOMB_X77_Y13_N28  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3120       ; LCCOMB_X76_Y9_N22   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3121       ; LCCOMB_X77_Y13_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3122       ; LCCOMB_X81_Y12_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3124       ; LCCOMB_X79_Y16_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3126       ; LCCOMB_X76_Y13_N18  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3127       ; LCCOMB_X79_Y14_N10  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3128       ; LCCOMB_X76_Y16_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3129       ; LCCOMB_X79_Y12_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3130       ; LCCOMB_X79_Y11_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3131       ; LCCOMB_X80_Y11_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3132       ; LCCOMB_X80_Y13_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3133       ; LCCOMB_X79_Y15_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3134       ; LCCOMB_X80_Y13_N10  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3135       ; LCCOMB_X76_Y16_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3136       ; LCCOMB_X77_Y12_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3137       ; LCCOMB_X82_Y12_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3138       ; LCCOMB_X77_Y9_N4    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3139       ; LCCOMB_X77_Y9_N22   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3140       ; LCCOMB_X80_Y11_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3142       ; LCCOMB_X81_Y16_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3144       ; LCCOMB_X79_Y10_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3145       ; LCCOMB_X79_Y10_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3146       ; LCCOMB_X81_Y17_N18  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3147       ; LCCOMB_X80_Y18_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3148       ; LCCOMB_X77_Y18_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3149       ; LCCOMB_X81_Y18_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3150       ; LCCOMB_X81_Y18_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3151       ; LCCOMB_X79_Y18_N28  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3152       ; LCCOMB_X77_Y14_N20  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3153       ; LCCOMB_X80_Y18_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3154       ; LCCOMB_X77_Y17_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3155       ; LCCOMB_X80_Y17_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3156       ; LCCOMB_X77_Y10_N18  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3157       ; LCCOMB_X82_Y11_N20  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3158       ; LCCOMB_X81_Y17_N16  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3159       ; LCCOMB_X86_Y16_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3160       ; LCCOMB_X87_Y16_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3161       ; LCCOMB_X91_Y15_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3162       ; LCCOMB_X87_Y18_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3163       ; LCCOMB_X86_Y14_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3164       ; LCCOMB_X85_Y17_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3165       ; LCCOMB_X88_Y12_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3166       ; LCCOMB_X83_Y17_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3167       ; LCCOMB_X87_Y15_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3168       ; LCCOMB_X87_Y16_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3169       ; LCCOMB_X85_Y15_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3170       ; LCCOMB_X88_Y15_N18  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3171       ; LCCOMB_X90_Y16_N18  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3172       ; LCCOMB_X84_Y17_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3173       ; LCCOMB_X91_Y15_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3174       ; LCCOMB_X88_Y16_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3175       ; LCCOMB_X86_Y18_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3176       ; LCCOMB_X82_Y10_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3177       ; LCCOMB_X86_Y11_N18  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3178       ; LCCOMB_X82_Y11_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3179       ; LCCOMB_X88_Y18_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3180       ; LCCOMB_X81_Y10_N20  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3181       ; LCCOMB_X86_Y17_N18  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3182       ; LCCOMB_X86_Y17_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3183       ; LCCOMB_X83_Y18_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3184       ; LCCOMB_X86_Y15_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3185       ; LCCOMB_X86_Y15_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3186       ; LCCOMB_X83_Y18_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3187       ; LCCOMB_X88_Y18_N18  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3188       ; LCCOMB_X81_Y10_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3189       ; LCCOMB_X85_Y16_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3190       ; LCCOMB_X82_Y10_N10  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3191       ; LCCOMB_X87_Y9_N0    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3192       ; LCCOMB_X86_Y10_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3193       ; LCCOMB_X87_Y10_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3194       ; LCCOMB_X87_Y10_N16  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3195       ; LCCOMB_X88_Y13_N28  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3196       ; LCCOMB_X88_Y8_N24   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3197       ; LCCOMB_X86_Y12_N16  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3198       ; LCCOMB_X89_Y15_N28  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3199       ; LCCOMB_X87_Y14_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3200       ; LCCOMB_X90_Y15_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3201       ; LCCOMB_X85_Y13_N10  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3202       ; LCCOMB_X86_Y14_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3203       ; LCCOMB_X87_Y9_N6    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3204       ; LCCOMB_X88_Y8_N18   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3205       ; LCCOMB_X89_Y12_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3206       ; LCCOMB_X79_Y8_N14   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3207       ; LCCOMB_X82_Y18_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3208       ; LCCOMB_X85_Y17_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3209       ; LCCOMB_X87_Y13_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3210       ; LCCOMB_X85_Y16_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3211       ; LCCOMB_X80_Y17_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3212       ; LCCOMB_X84_Y16_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3213       ; LCCOMB_X84_Y16_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3214       ; LCCOMB_X85_Y16_N20  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3215       ; LCCOMB_X82_Y18_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3216       ; LCCOMB_X87_Y17_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3217       ; LCCOMB_X85_Y18_N28  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3218       ; LCCOMB_X86_Y18_N14  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3219       ; LCCOMB_X87_Y18_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3220       ; LCCOMB_X85_Y8_N8    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3221       ; LCCOMB_X87_Y13_N20  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3222       ; LCCOMB_X88_Y16_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3223       ; LCCOMB_X83_Y10_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3224       ; LCCOMB_X86_Y9_N0    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3225       ; LCCOMB_X80_Y9_N22   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3226       ; LCCOMB_X86_Y9_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3227       ; LCCOMB_X84_Y10_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3228       ; LCCOMB_X80_Y8_N4    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3229       ; LCCOMB_X81_Y11_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3230       ; LCCOMB_X87_Y11_N0   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3231       ; LCCOMB_X83_Y7_N28   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3232       ; LCCOMB_X80_Y8_N26   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3233       ; LCCOMB_X76_Y11_N2   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3234       ; LCCOMB_X87_Y11_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3235       ; LCCOMB_X83_Y10_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3236       ; LCCOMB_X79_Y8_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3237       ; LCCOMB_X89_Y11_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3238       ; LCCOMB_X86_Y8_N8    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3239       ; LCCOMB_X85_Y7_N16   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3240       ; LCCOMB_X84_Y7_N26   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3241       ; LCCOMB_X85_Y7_N20   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3242       ; LCCOMB_X84_Y9_N4    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3243       ; LCCOMB_X76_Y13_N20  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3244       ; LCCOMB_X82_Y9_N8    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3245       ; LCCOMB_X82_Y9_N10   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3246       ; LCCOMB_X83_Y9_N4    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3247       ; LCCOMB_X82_Y13_N28  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3248       ; LCCOMB_X83_Y11_N16  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3249       ; LCCOMB_X82_Y13_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3250       ; LCCOMB_X83_Y9_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3251       ; LCCOMB_X82_Y8_N26   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3252       ; LCCOMB_X85_Y10_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3253       ; LCCOMB_X89_Y10_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3254       ; LCCOMB_X85_Y8_N14   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3255       ; LCCOMB_X83_Y8_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3256       ; LCCOMB_X81_Y8_N28   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3257       ; LCCOMB_X81_Y8_N22   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3258       ; LCCOMB_X82_Y8_N28   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3259       ; LCCOMB_X84_Y9_N30   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3260       ; LCCOMB_X81_Y9_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3261       ; LCCOMB_X81_Y9_N26   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3262       ; LCCOMB_X88_Y12_N24  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3263       ; LCCOMB_X81_Y7_N20   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3264       ; LCCOMB_X84_Y7_N22   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3265       ; LCCOMB_X81_Y7_N6    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3266       ; LCCOMB_X88_Y7_N12   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3267       ; LCCOMB_X83_Y8_N30   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3268       ; LCCOMB_X82_Y7_N0    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3269       ; LCCOMB_X82_Y7_N30   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3270       ; LCCOMB_X86_Y8_N26   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3271       ; LCCOMB_X79_Y17_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3272       ; LCCOMB_X80_Y14_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3273       ; LCCOMB_X79_Y13_N8   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3274       ; LCCOMB_X90_Y14_N20  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3275       ; LCCOMB_X84_Y14_N4   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3276       ; LCCOMB_X81_Y11_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3277       ; LCCOMB_X80_Y14_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3278       ; LCCOMB_X85_Y14_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3279       ; LCCOMB_X79_Y7_N4    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3280       ; LCCOMB_X76_Y11_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3281       ; LCCOMB_X79_Y7_N10   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3282       ; LCCOMB_X83_Y7_N2    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3283       ; LCCOMB_X84_Y14_N26  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3284       ; LCCOMB_X77_Y10_N6   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3285       ; LCCOMB_X79_Y13_N30  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ram:RAM|registrador~3286       ; LCCOMB_X82_Y14_N22  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +--------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1726,7 +1725,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name     ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; CLOCK_50 ; PIN_Y2   ; 1898    ; 3                                    ; Global Clock         ; GCLK4            ; --                        ;
+; CLOCK_50 ; PIN_Y2   ; 1897    ; 2                                    ; Global Clock         ; GCLK4            ; --                        ;
 +----------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1735,52 +1734,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 4,862 / 342,891 ( 1 % ) ;
-; C16 interconnects     ; 92 / 10,120 ( < 1 % )   ;
-; C4 interconnects      ; 2,729 / 209,544 ( 1 % ) ;
-; Direct links          ; 323 / 342,891 ( < 1 % ) ;
+; Block interconnects   ; 4,872 / 342,891 ( 1 % ) ;
+; C16 interconnects     ; 94 / 10,120 ( < 1 % )   ;
+; C4 interconnects      ; 2,893 / 209,544 ( 1 % ) ;
+; Direct links          ; 320 / 342,891 ( < 1 % ) ;
 ; Global clocks         ; 1 / 20 ( 5 % )          ;
-; Local interconnects   ; 878 / 119,088 ( < 1 % ) ;
-; R24 interconnects     ; 73 / 9,963 ( < 1 % )    ;
-; R4 interconnects      ; 3,208 / 289,782 ( 1 % ) ;
+; Local interconnects   ; 912 / 119,088 ( < 1 % ) ;
+; R24 interconnects     ; 84 / 9,963 ( < 1 % )    ;
+; R4 interconnects      ; 3,392 / 289,782 ( 1 % ) ;
 +-----------------------+-------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 12.43) ; Number of LABs  (Total = 215) ;
+; Number of Logic Elements  (Average = 12.29) ; Number of LABs  (Total = 219) ;
 +---------------------------------------------+-------------------------------+
 ; 1                                           ; 9                             ;
-; 2                                           ; 11                            ;
-; 3                                           ; 6                             ;
-; 4                                           ; 8                             ;
-; 5                                           ; 6                             ;
+; 2                                           ; 25                            ;
+; 3                                           ; 5                             ;
+; 4                                           ; 5                             ;
+; 5                                           ; 2                             ;
 ; 6                                           ; 3                             ;
-; 7                                           ; 2                             ;
-; 8                                           ; 2                             ;
-; 9                                           ; 4                             ;
-; 10                                          ; 2                             ;
+; 7                                           ; 1                             ;
+; 8                                           ; 3                             ;
+; 9                                           ; 0                             ;
+; 10                                          ; 0                             ;
 ; 11                                          ; 4                             ;
-; 12                                          ; 2                             ;
-; 13                                          ; 15                            ;
-; 14                                          ; 17                            ;
-; 15                                          ; 27                            ;
-; 16                                          ; 97                            ;
+; 12                                          ; 3                             ;
+; 13                                          ; 9                             ;
+; 14                                          ; 16                            ;
+; 15                                          ; 26                            ;
+; 16                                          ; 108                           ;
 +---------------------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 1.47) ; Number of LABs  (Total = 215) ;
+; LAB-wide Signals  (Average = 1.39) ; Number of LABs  (Total = 219) ;
 +------------------------------------+-------------------------------+
-; 1 Async. clear                     ; 1                             ;
-; 1 Clock                            ; 208                           ;
-; 1 Clock enable                     ; 39                            ;
-; 1 Sync. clear                      ; 1                             ;
-; 1 Sync. load                       ; 2                             ;
-; 2 Clock enables                    ; 63                            ;
+; 1 Clock                            ; 210                           ;
+; 1 Clock enable                     ; 45                            ;
+; 1 Sync. load                       ; 1                             ;
+; 2 Clock enables                    ; 47                            ;
 ; 2 Clocks                           ; 2                             ;
 +------------------------------------+-------------------------------+
 
@@ -1788,64 +1785,64 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 19.01) ; Number of LABs  (Total = 215) ;
+; Number of Signals Sourced  (Average = 18.65) ; Number of LABs  (Total = 219) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
 ; 1                                            ; 4                             ;
-; 2                                            ; 6                             ;
-; 3                                            ; 3                             ;
-; 4                                            ; 7                             ;
-; 5                                            ; 4                             ;
-; 6                                            ; 5                             ;
-; 7                                            ; 5                             ;
-; 8                                            ; 6                             ;
+; 2                                            ; 7                             ;
+; 3                                            ; 2                             ;
+; 4                                            ; 23                            ;
+; 5                                            ; 2                             ;
+; 6                                            ; 4                             ;
+; 7                                            ; 1                             ;
+; 8                                            ; 3                             ;
 ; 9                                            ; 3                             ;
-; 10                                           ; 1                             ;
+; 10                                           ; 0                             ;
 ; 11                                           ; 1                             ;
-; 12                                           ; 1                             ;
+; 12                                           ; 0                             ;
 ; 13                                           ; 2                             ;
 ; 14                                           ; 0                             ;
-; 15                                           ; 5                             ;
-; 16                                           ; 3                             ;
-; 17                                           ; 3                             ;
-; 18                                           ; 13                            ;
-; 19                                           ; 10                            ;
-; 20                                           ; 8                             ;
-; 21                                           ; 14                            ;
-; 22                                           ; 9                             ;
-; 23                                           ; 14                            ;
-; 24                                           ; 24                            ;
-; 25                                           ; 29                            ;
-; 26                                           ; 17                            ;
-; 27                                           ; 8                             ;
-; 28                                           ; 6                             ;
-; 29                                           ; 3                             ;
-; 30                                           ; 1                             ;
+; 15                                           ; 2                             ;
+; 16                                           ; 5                             ;
+; 17                                           ; 2                             ;
+; 18                                           ; 8                             ;
+; 19                                           ; 4                             ;
+; 20                                           ; 14                            ;
+; 21                                           ; 15                            ;
+; 22                                           ; 19                            ;
+; 23                                           ; 20                            ;
+; 24                                           ; 22                            ;
+; 25                                           ; 18                            ;
+; 26                                           ; 20                            ;
+; 27                                           ; 9                             ;
+; 28                                           ; 4                             ;
+; 29                                           ; 1                             ;
+; 30                                           ; 4                             ;
 +----------------------------------------------+-------------------------------+
 
 
 +---------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                         ;
 +-------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 9.34) ; Number of LABs  (Total = 215) ;
+; Number of Signals Sourced Out  (Average = 9.06) ; Number of LABs  (Total = 219) ;
 +-------------------------------------------------+-------------------------------+
 ; 0                                               ; 0                             ;
-; 1                                               ; 16                            ;
-; 2                                               ; 15                            ;
+; 1                                               ; 21                            ;
+; 2                                               ; 18                            ;
 ; 3                                               ; 10                            ;
-; 4                                               ; 14                            ;
+; 4                                               ; 11                            ;
 ; 5                                               ; 7                             ;
-; 6                                               ; 5                             ;
+; 6                                               ; 3                             ;
 ; 7                                               ; 5                             ;
-; 8                                               ; 5                             ;
-; 9                                               ; 10                            ;
+; 8                                               ; 6                             ;
+; 9                                               ; 11                            ;
 ; 10                                              ; 11                            ;
-; 11                                              ; 15                            ;
-; 12                                              ; 20                            ;
-; 13                                              ; 38                            ;
-; 14                                              ; 33                            ;
-; 15                                              ; 4                             ;
-; 16                                              ; 6                             ;
+; 11                                              ; 17                            ;
+; 12                                              ; 24                            ;
+; 13                                              ; 35                            ;
+; 14                                              ; 30                            ;
+; 15                                              ; 6                             ;
+; 16                                              ; 3                             ;
 ; 17                                              ; 0                             ;
 ; 18                                              ; 0                             ;
 ; 19                                              ; 0                             ;
@@ -1856,45 +1853,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 22.05) ; Number of LABs  (Total = 215) ;
+; Number of Distinct Inputs  (Average = 21.65) ; Number of LABs  (Total = 219) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
 ; 1                                            ; 0                             ;
-; 2                                            ; 3                             ;
-; 3                                            ; 5                             ;
-; 4                                            ; 5                             ;
-; 5                                            ; 4                             ;
-; 6                                            ; 5                             ;
-; 7                                            ; 3                             ;
-; 8                                            ; 6                             ;
-; 9                                            ; 3                             ;
-; 10                                           ; 8                             ;
-; 11                                           ; 5                             ;
+; 2                                            ; 4                             ;
+; 3                                            ; 7                             ;
+; 4                                            ; 7                             ;
+; 5                                            ; 2                             ;
+; 6                                            ; 6                             ;
+; 7                                            ; 1                             ;
+; 8                                            ; 16                            ;
+; 9                                            ; 4                             ;
+; 10                                           ; 5                             ;
+; 11                                           ; 3                             ;
 ; 12                                           ; 3                             ;
-; 13                                           ; 8                             ;
-; 14                                           ; 0                             ;
-; 15                                           ; 1                             ;
+; 13                                           ; 3                             ;
+; 14                                           ; 1                             ;
+; 15                                           ; 6                             ;
 ; 16                                           ; 1                             ;
-; 17                                           ; 5                             ;
-; 18                                           ; 4                             ;
-; 19                                           ; 9                             ;
-; 20                                           ; 5                             ;
-; 21                                           ; 8                             ;
-; 22                                           ; 6                             ;
-; 23                                           ; 10                            ;
+; 17                                           ; 4                             ;
+; 18                                           ; 6                             ;
+; 19                                           ; 4                             ;
+; 20                                           ; 3                             ;
+; 21                                           ; 4                             ;
+; 22                                           ; 13                            ;
+; 23                                           ; 7                             ;
 ; 24                                           ; 9                             ;
-; 25                                           ; 10                            ;
-; 26                                           ; 4                             ;
-; 27                                           ; 10                            ;
-; 28                                           ; 6                             ;
-; 29                                           ; 10                            ;
-; 30                                           ; 7                             ;
-; 31                                           ; 10                            ;
-; 32                                           ; 4                             ;
-; 33                                           ; 6                             ;
-; 34                                           ; 8                             ;
-; 35                                           ; 2                             ;
-; 36                                           ; 11                            ;
+; 25                                           ; 3                             ;
+; 26                                           ; 11                            ;
+; 27                                           ; 7                             ;
+; 28                                           ; 11                            ;
+; 29                                           ; 5                             ;
+; 30                                           ; 9                             ;
+; 31                                           ; 6                             ;
+; 32                                           ; 7                             ;
+; 33                                           ; 4                             ;
+; 34                                           ; 9                             ;
+; 35                                           ; 9                             ;
+; 36                                           ; 8                             ;
 ; 37                                           ; 11                            ;
 +----------------------------------------------+-------------------------------+
 
@@ -2080,10 +2077,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; CLOCK_50        ; SW[0]                ; 4.8               ;
-; CLOCK_50        ; CLOCK_50,SW[0]       ; 2.7               ;
-; I/O             ; CLOCK_50             ; 1.1               ;
-+-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
@@ -2093,17 +2086,11 @@ This will disable optimization of problematic paths and expose them for further 
 +-------------------------+---------------------------------+-------------------+
 ; Source Register         ; Destination Register            ; Delay Added in ns ;
 +-------------------------+---------------------------------+-------------------+
-; cpu:CPU|pc:PC|output[4] ; flipflopReset:FFreset|Q         ; 2.118             ;
-; cpu:CPU|pc:PC|output[1] ; flipflopReset:FFreset|Q         ; 2.073             ;
-; cpu:CPU|pc:PC|output[5] ; flipflopReset:FFreset|Q         ; 2.058             ;
-; cpu:CPU|pc:PC|output[2] ; flipflopReset:FFreset|Q         ; 2.036             ;
-; cpu:CPU|pc:PC|output[3] ; flipflopReset:FFreset|Q         ; 2.011             ;
-; cpu:CPU|pc:PC|output[7] ; flipflopReset:FFreset|Q         ; 2.009             ;
-; cpu:CPU|pc:PC|output[0] ; flipflopReset:FFreset|Q         ; 1.986             ;
-; cpu:CPU|pc:PC|output[6] ; flipflopReset:FFreset|Q         ; 1.939             ;
-; CLOCK_50                ; divisorGenerico:BASE_TEMPO|tick ; 0.739             ;
+; CLOCK_50                ; divisorGenerico:BASE_TEMPO|tick ; 0.438             ;
+; cpu:CPU|pc:PC|output[1] ; flipflopReset:FFreset|Q         ; 0.432             ;
+; cpu:CPU|pc:PC|output[3] ; flipflopReset:FFreset|Q         ; 0.369             ;
 +-------------------------+---------------------------------+-------------------+
-Note: This table only shows the top 9 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 3 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2162,7 +2149,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  71 pins available
 Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "LEDG[8]" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
@@ -2171,29 +2158,28 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:07
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 24% of the available device resources in the region that extends from location X81_Y0 to location X91_Y11
+    Info (170196): Router estimated peak interconnect usage is 24% of the available device resources in the region that extends from location X81_Y12 to location X91_Y23
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:16
-Info (11888): Total time spent on timing analysis during the Fitter is 1.41 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:23
+Info (11888): Total time spent on timing analysis during the Fitter is 1.20 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Warning (169177): 5 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
+Warning (169177): 4 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin SW[1] uses I/O standard 2.5 V at AG15 File: /home/arqcomp/Documents/Project_Clock/vhdl/relogio.vhd Line: 19
     Info (169178): Pin SW[2] uses I/O standard 2.5 V at AH15 File: /home/arqcomp/Documents/Project_Clock/vhdl/relogio.vhd Line: 19
     Info (169178): Pin SW[4] uses I/O standard 2.5 V at AH25 File: /home/arqcomp/Documents/Project_Clock/vhdl/relogio.vhd Line: 19
-    Info (169178): Pin SW[12] uses I/O standard 2.5 V at AG25 File: /home/arqcomp/Documents/Project_Clock/vhdl/relogio.vhd Line: 19
     Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at Y2 File: /home/arqcomp/Documents/Project_Clock/vhdl/relogio.vhd Line: 13
 Info (144001): Generated suppressed messages file /home/arqcomp/Documents/Project_Clock/vhdl/relogio.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 1763 megabytes
-    Info: Processing ended: Tue Oct 15 16:43:57 2019
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:00:52
+    Info: Peak virtual memory: 1741 megabytes
+    Info: Processing ended: Tue Oct 15 19:55:41 2019
+    Info: Elapsed time: 00:00:42
+    Info: Total CPU time (on all processors): 00:00:58
 
 
 +----------------------------+
