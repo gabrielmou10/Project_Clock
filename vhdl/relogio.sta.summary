@@ -1,77 +1,77 @@
 ------------------------------------------------------------
-TimeQuest Timing Analyzer Summary
+Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -3.123
-TNS   : -95.848
-
-Type  : Slow 1200mV 85C Model Setup 'TESTEdivisor:BASE_TEMPO_TESTE|tick'
-Slack : -2.860
-TNS   : -36.017
+Slack : -11.865
+TNS   : -12593.673
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : 0.441
+Slack : 0.404
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'TESTEdivisor:BASE_TEMPO_TESTE|tick'
-Slack : 0.663
+Type  : Slow 1200mV 85C Model Recovery 'SW[0]'
+Slack : -0.752
+TNS   : -0.752
+
+Type  : Slow 1200mV 85C Model Removal 'SW[0]'
+Slack : 0.262
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -60.825
+TNS   : -2443.215
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TESTEdivisor:BASE_TEMPO_TESTE|tick'
-Slack : -1.285
-TNS   : -21.845
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SW[0]'
+Slack : -3.000
+TNS   : -4.285
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -2.819
-TNS   : -83.411
-
-Type  : Slow 1200mV 0C Model Setup 'TESTEdivisor:BASE_TEMPO_TESTE|tick'
-Slack : -2.536
-TNS   : -31.129
+Slack : -10.881
+TNS   : -11423.972
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.400
+Slack : 0.356
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'TESTEdivisor:BASE_TEMPO_TESTE|tick'
-Slack : 0.605
+Type  : Slow 1200mV 0C Model Recovery 'SW[0]'
+Slack : -0.421
+TNS   : -0.421
+
+Type  : Slow 1200mV 0C Model Removal 'SW[0]'
+Slack : 0.027
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -60.825
+TNS   : -2443.215
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TESTEdivisor:BASE_TEMPO_TESTE|tick'
-Slack : -1.285
-TNS   : -21.845
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SW[0]'
+Slack : -3.000
+TNS   : -4.285
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -0.996
-TNS   : -24.535
-
-Type  : Fast 1200mV 0C Model Setup 'TESTEdivisor:BASE_TEMPO_TESTE|tick'
-Slack : -0.887
-TNS   : -8.931
+Slack : -5.463
+TNS   : -5430.399
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.186
+Slack : 0.183
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'TESTEdivisor:BASE_TEMPO_TESTE|tick'
-Slack : 0.304
+Type  : Fast 1200mV 0C Model Recovery 'SW[0]'
+Slack : 0.080
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'SW[0]'
+Slack : 0.122
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -61.818
+TNS   : -2449.994
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TESTEdivisor:BASE_TEMPO_TESTE|tick'
-Slack : -1.000
-TNS   : -17.000
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SW[0]'
+Slack : -3.000
+TNS   : -4.489
 
 ------------------------------------------------------------

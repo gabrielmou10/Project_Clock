@@ -51,24 +51,33 @@ architecture estrutural of relogio is
 	 signal testeclock50 : STD_LOGIC;
 	 
 	 signal saidaHEX : STD_LOGIC_VECTOR(3 downto 0);
+	 signal saidadiv1 : STD_LOGIC;
+	 signal saidadiv2 : STD_LOGIC;
+	 signal saidamuxbasetempo : STD_LOGIC;
+	 signal saidaflipReset   : STD_LOGIC;
+	 signal habilita_BT_read  : STD_LOGIC;
+	 signal habilitadecoder   : std_logic;
+	 
 
 begin
 
 	aux <= entradaCPU & barramentoDadosEntrada(6 downto 0);
 
+	
     -- Instanciação da CPU
 	CPU : entity work.cpu
 	port map
 	(	
 		LEDG => LEDG,
-		CLOCK_50 => testeclock50,
+		CLOCK_50 => CLOCK_50,
 		barramentoDadosEntrada => aux,
 		barramentoEnderecos => barramentoEnderecos,
 		barramentoDadosSaida => barramentoDadosSaida,
 		resetBarramento => resetBarramento,
 		readEnable => readEnable,
 		writeEnable => writeEnable,
-		saidaHEX    => saidaHEX
+		saidaHEX    => saidaHEX,
+		saidaflipenable => habilitadecoder
 	);
     
     -- Instanciação do Decodificador de Endereços
@@ -78,12 +87,14 @@ begin
     port map
     (
         enable_decoder  => barramentoEnderecos(7 DOWNTO 5),
+		  enable_geral  =>   habilitadecoder,
 		  enable_dez_hora => habilitaDisplay(0),
         enable_unit_hora => habilitaDisplay(1),
         enable_dez_min => habilitaDisplay(2),
 		  enable_unit_min => habilitaDisplay(3),
 		  enable_dez_seg => habilitaDisplay(4),
-		  enable_unit_seg => habilitaDisplay(5)	  -- ...
+		  enable_unit_seg => habilitaDisplay(5),
+		  enable_BT_read => habilita_BT_read
     );
 	 
 	 DISPLAY1: entity work.conversorHex7Seg
@@ -163,24 +174,65 @@ begin
     -- Instanciação do componente Divisor Genérico
         -- Componente da composição da Base de Tempo
     BASE_TEMPO : entity work.divisorGenerico 
-    port map
+	 port map
     (
         clk             => CLOCK_50,
-		  divisorin			=> resetBarramento,
-		  switch				=> SW(0),
-        divisorout      => entradaCPU
+        saida_clk      => saidadiv1
     );
 	 
-	 BASE_TEMPO_TESTE : entity work.TESTEdivisor 
-    port map
+	 BASE_TEMPO2 : entity work.divisorGenerico 
+		  generic map(
+		  divisor => 100000
+		  )
+	 port map
     (
         clk             => CLOCK_50,
-		  divisorin			=> '0',
-		  switch				=> '0',
-        divisorout      => testeclock50
+        saida_clk      => saidadiv2
     );
 	 
 	 
+	 
+	     MUXBaseTempo : entity work.mux1bit
+
+    port map
+    (
+        entradaA_MUX            => saidadiv1,
+        entradaB_MUX            => saidadiv2,
+        seletor_MUX             => SW(0),
+        saida_MUX               => saidamuxbasetempo 
+    );
+	 
+	 MUXBtRam : entity work.mux1bit
+
+    port map
+    (
+        entradaA_MUX            => '0',
+        entradaB_MUX            => saidaflipReset,
+        seletor_MUX             => habilita_BT_read,
+        saida_MUX               => entradaCPU 
+    );
+	 
+	 
+	 
+	 
+--	 BASE_TEMPO_TESTE : entity work.TESTEdivisor 
+--    port map
+--    (
+--        clk             => CLOCK_50,
+--		  divisorin			=> '0',
+--		  switch				=> '0',
+--        divisorout      => testeclock50
+--    );
+	 
+	FFreset :  entity work.flipflopReset 
+	port map
+	( 
+	D        => '1',
+	clk      => saidamuxbasetempo,
+	reset  =>  resetBarramento,
+	Q    =>  saidaflipReset
+	) ;
+		 
 	 
 	 
     -- Completar com a instanciação de demais componentes necessários 
